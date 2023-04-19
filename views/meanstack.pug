@@ -1,0 +1,1098 @@
+html
+  head
+    title GBR's MEAN-STACK PDF files
+    meta(charset="UTF-8")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css")
+    link(href="https://kit-pro.fontawesome.com/releases/v5.13.0/css/pro.min.css" rel="stylesheet")
+    link(href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous")
+    link(rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css")
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css")
+
+  style.
+    canvas {
+    display: block;
+    vertical-align: bottom;
+    }
+    #particles-js {
+    position: fixed;
+    width: 100%;
+    height:1200px;
+    /*background: transparent;
+    overflow:visible;*/
+    background-image:url('images/ab.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+  style.
+    h5{
+    color:aqua;
+    font-weight:bold;
+    text-shadow:0 0 7px black;
+    white-space:nowrap;
+    padding:0px 0px 0px 10.5px;
+    }
+    .back{
+    /*to make text unselectable*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor:not-allowed;
+    position:absolute;
+    background-image:linear-gradient(to right bottom,black,#01283B);
+    background-size:cover;
+    box-sizing:border-box;
+    width:90%;
+    overflow:hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-transition: -moz-transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: -o-transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transition: -webkit-transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 35px 25px rgba(0, 0, 0, 0.086),
+    0 20px 20px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    width: 170px;
+    height: 280px;
+    }
+    .front {
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-transition: -moz-transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: -o-transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transition: -webkit-transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+     box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 35px 25px rgba(0, 0, 0, 0.086),
+    0 20px 20px rgba(0, 0, 0, 0.12);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 8px;
+    position: absolute;
+    background-image:url("images/a(1).jpg");
+    background-size:cover;
+    width: 170px;
+    height: 280px;
+    z-index: 2;
+    }
+    /*.back:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,.1);
+    transition:0.5s;
+    pointer-events:none;
+    }
+    .back:hover:before{
+    left:-50%;
+    transform:skewX(-5deg);
+    }*/
+    .back .content{
+    position:absolute;
+    top:10px;
+    left:10px;
+    right:10px;
+    bottom:10px;
+    padding-left:10px;
+    border:2px solid aqua;
+    border-radius: 0 0 50px 0px;
+    text-align:left;
+    font-size:10px;
+    white-space:nowrap;
+    line-height:10px;
+    box-shadow:0 5px 10px rgba(0,0,0,.5);
+    }
+    .back .content h1{
+    color:#fff;
+    font-size:30px;
+    margin:0 0 10px;
+    padding:0;
+    }
+    .back .content p{
+    color:#fff;
+    }
+    .back span{
+    z-index:-1;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:block;
+    box-sizing:border-box;
+    }
+    .back span:nth-child(1){
+    transform:rotate(0deg);
+    }
+    .back span:nth-child(2){
+    transform:rotate(90deg);
+    }
+    .back span:nth-child(3){
+    transform:rotate(180deg);
+    }
+    .back span:nth-child(4){
+    transform:rotate(270deg);
+    }
+    .back span:nth-child(2):before{
+    animation-delay:-2s;
+    }
+    .back span:nth-child(4):before{
+    animation-delay:-2s;
+    }
+    .back span:before{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:2px;
+    background:aqua;
+    animation: animate 4s linear infinite;
+    }
+    @keyframes animate{
+    0%{
+    transform:scaleX(0);
+    transform-origin:left;
+    }
+    50%{
+    transform:scaleX(1);
+    transform-origin:left;
+    }
+    50.1%{
+    transform:scaleX(1);
+    transform-origin:right;
+    }
+    100%{
+    transform:scaleX(0);
+    transform-origin:right;
+    }
+    }
+  style.
+    body::-webkit-scrollbar{
+    display:none;
+    }
+    .fab,.fad,.far,.fas{
+    font-size: 45px;
+    margin-top:35px;
+    color:aqua;
+    font-weight:bold;
+    text-align:center;
+    text-shadow:none;
+    animation: rainbow-colors 3s linear infinite;
+    animation-delay: calc(-4s * var(--char-percent));
+    }
+    /* Unfortunately, browsers try to take the shortest distance between transition/animation properties, so a simple `0turn` to `1turn` doesn't get the proper effect. */
+    @keyframes rainbow-colors {
+    0% { color: hsl(0turn, 90%, 65%); }
+    25% { color: hsl(.25turn, 90%, 65%); }
+    50% { color: hsl(.5turn, 90%, 65%); }
+    75% { color: hsl(.75turn, 90%, 65%); }
+    100% { color: hsl(1turn, 90%, 65%); }
+    }
+    
+    .fa-reply{
+    color:black;
+    background-color:aqua;
+    border-radius:50%;
+    height:15px;
+    width:15px;
+    margin:235px 0px 0px 133px;
+    padding:3.65px 0px 0px 0px;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 35px 25px rgba(0, 0, 0, 0.086),
+    0 20px 20px rgba(0, 0, 0, 0.12);
+    }
+    .fa-reply:hover{
+    color:yellow;
+    font-size:5px;
+    background-color:red;
+    font-weight:bold;
+    box-shadow:0 0 6px red;
+    } 
+    .btn:hover {
+    outline: 0 !important;
+    }
+    .btn:focus {
+    outline: 0 !important;
+    }
+    .btn:active {
+    outline: 0 !important;
+    }
+    .btn-download {
+    height: 40px;
+    width:130px;
+    text-align: center;
+    margin-top: 68px;
+    margin-left:5px;
+    padding:0px;
+    font-size: 16px;
+    border:none;
+    }
+    .btn-flip {
+    color:aqua;
+    background-color:transparent;
+    margin-top:15px;
+    }
+    .btn-flip-extend, .btn-flip:hover, .btn-flip:focus {
+    background-color:transparent;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: 1;
+    color:white;
+    text-align:center;
+    text-shadow: 0px 0px 10px white,0px 0px 10px white;
+    -webkit-text-shadow:0px 0px 5px white;
+    }
+    .btn-flip i {
+    font-size: 16px;
+    }
+    .card-holder {
+    margin-top: 50px;
+    }
+    .card-container {
+    -moz-perspective: 800px;
+    -webkit-perspective: 800px;
+    perspective: 800px;
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    width: 170px;
+    height: 280px;
+    }
+    .card-container:not(.manual-flip):hover .front {
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    }
+    .card-container:not(.manual-flip):hover .back {
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    }
+    .card-container.hover.manual-flip .front {
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    }
+    .card-container.hover.manual-flip .back {
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    }
+    .card {
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-transition: -moz-transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: -o-transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transition: -webkit-transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    background: none repeat scroll 0 0 #fff;
+    color: #444444;
+    max-width: 320px;
+    margin: 0 auto;
+    }
+    .card .cover {
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+    z-index: -2;
+    font-size:17px;
+    margin-top:15px;
+    text-align:center;
+    font-weight:bold;
+    height:40px;
+    white-space:nowrap;
+    color:#fff;
+    text-shadow:0 0 6px black;
+    }
+    .card .branded {
+    position: relative;
+    background: transparent;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: block;
+    margin:auto;
+    height: 65px;
+    width: 65px;
+    text-align: center;
+    text-shadow:0 0 5px white;
+    }
+    .card .front .content {
+    background-color: transparent;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height:90px;
+    padding: 0px 15px 20px;
+    }
+    .card .content .main {
+    min-height: 10px;
+    }
+    .card .use-for {
+    font-size: 22px;
+    text-align: center;
+    }
+    .card .footer {
+    color: #999;
+    padding: 0px 0 0;
+    text-align: center;
+    background-color:transparent;
+    height:40px;
+    }   
+    .card .back .content .main {
+    height: 215px;
+    }
+    .title {
+    color: #506a85;
+    text-align: center;
+    font-weight: 300;
+    font-size: 44px;
+    margin-bottom: 90px;
+    line-height: 90%;
+    }
+    nav .menubar {
+    width: 100%;
+    height: 45px;
+    position: fixed;
+    z-index:1;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 35px 0px 20px;
+    box-sizing: border-box;
+    background-color:black;
+    overflow:hidden;
+    
+    /* Logo */
+    /* Icons */
+    }
+    nav .menubar .icons {
+    display: flex;
+    } 
+    .logo{
+    font-weight:bolder;
+    text-shadow:0 0 6px black;
+    color:white;
+    cursor:none;
+    }
+    .logo:hover {
+    background-position: right center;
+    }
+
+    .border-neon {
+    background-color: transparent;
+    border: 2px solid aqua;
+    color: aqua;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    }
+    
+    .border-neon:hover, .border-neon:focus {
+    color:white;
+    -webkit-box-shadow: inset 0px 0px 5px 1px blue;
+    box-shadow: 0px 0px 10px 3px blue, inset 0px 0px 10px 3px blue;
+    border-color: #fff;
+    }
+    .secondary-icons{
+    font-size:15px;
+    font-weight:bolder;
+    text-shadow:0 0 6px black;
+    color:white;
+    cursor:pointer;
+    }
+    .secondary-icons:hover{
+    color:red;
+    text-shadow:0 0 2px white;
+    cursor:pointer;
+    font-weight:bold;
+    }
+    .col-md-2{
+    background-color:transparent;
+    height:280px;
+    width:170px;
+    margin-top:20px;
+    margin-bottom:50px;
+    padding-left:0px;
+    border-radius:8px;
+    }
+   
+   
+  body
+    #particles-js
+    nav
+      .menubar
+        .logo GBR's MEAN-STACK PDFs
+        .icons
+          .secondary-icons
+            i.icon-second.fa.fa-home(onclick="window.location.href='/index';")
+            span(onclick="window.location.href='/index';") _Home
+              
+    .container
+      .row(style="padding-top:7%;")
+        section
+
+          .col-md-2.col-md-offset-1
+            .card-container.manual-flip
+              .card
+                .front
+                  .cover AngularJS
+                  .branded
+                    i.fab.fa-angular
+                  .content
+                    .main
+                      button.border-neon.btn.btn-block.btn-download(onclick="window.location.href='PDFs/angularjs.pdf';" download) View/Download
+                    .footer
+                      button.btn.btn-flip.btn-qr(onclick="rotateCard(this)")
+                        i.fa.fa-eye
+                        |  Content in PDF
+                .back
+                  span
+                  span
+                  span
+                  span
+                  .content
+                    h5 Topics Covered 
+                    p &#x1f449 Getting started
+                    p &#x1f449 Modules,Components
+                    p &#x1f449 Built-in directives
+                    p &#x1f449 Controllers
+                    p &#x1f449 Sharing data
+                    p &#x1f449 Binding options
+                    p &#x1f449 Angular $Scopes
+                    p &#x1f449 $http request
+                    p &#x1f449 Grunt tasks
+                    p &#x1f449 Angular MVC
+                    p &#x1f449 Debugging
+                  .footer
+                    button.btn.btn-flip(rel="tooltip" title="Go Back" onclick="rotateCard(this)")
+                      i.fa.fa-reply(style="font-size:10px;")
+          
+
+          .col-md-2.col-md-offset-1
+            .card-container.manual-flip
+              .card
+                .front
+                  .cover Cascading styles
+                  .branded
+                    i.fab.fa-css3-alt
+                  .content
+                    .main
+                      button.btn.btn-block.border-neon.btn-download(onclick="window.location.href='PDFs/css.pdf';" download) View/Download
+                    .footer
+                      button.btn.btn-flip.btn-qr(onclick="rotateCard(this)")
+                        i.fa.fa-eye
+                        |  Content in PDF
+                // end front panel
+                .back
+                  span
+                  span
+                  span
+                  span
+                  .content
+                    h5 Topics Covered 
+                    p &#x1f449 Getting started
+                    p &#x1f449 Comments,Selectors
+                    p &#x1f449 Background,Centering
+                    p &#x1f449 Box model
+                    p &#x1f449 Marging,Padding
+                    p &#x1f449 Outline,Overflow
+                    p &#x1f449 Typography
+                    p &#x1f449 Pseudo elements
+                    p &#x1f449 Positioning
+                    p &#x1f449 Animations
+                    p &#x1f449 Transformations..
+                  .footer
+                    button.btn.btn-flip(rel="tooltip" title="Go Back" onclick="rotateCard(this)")
+                      i.fa.fa-reply(style="font-size:10px;")
+           
+
+          .col-md-2.col-md-offset-1
+            .card-container.manual-flip
+              .card
+                .front
+                  .cover HTML5
+                  .branded
+                    i.fab.fa-html5
+                  .content
+                    .main
+                      button.btn.btn-block.border-neon.btn-download(onclick="window.location.href='PDFs/html5.pdf';" download) View/Download
+                    .footer
+                      button.btn.btn-flip.btn-qr(onclick="rotateCard(this)")
+                        i.fa.fa-eye
+                        |  Content in PDF
+                // end front panel
+                
+                .back
+                  span
+                  span
+                  span
+                  span
+                  .content
+                    h5 Topics Covered 
+                    p &#x1f449 Heading,Paragraphs
+                    p &#x1f449 Lists,Tables
+                    p &#x1f449 Data attributes
+                    p &#x1f449 Forms,Divisions
+                    p &#x1f449 Selecting elements
+                    p &#x1f449 Navigation bars
+                    p &#x1f449 Media elements
+                    p &#x1f449 Progress elements
+                    p &#x1f449 IFrames,SVG
+                    p &#x1f449 Meta information
+                    p &#x1f449 Event attributes...
+                  .footer
+                    button.btn.btn-flip(rel="tooltip" title="Go Back" onclick="rotateCard(this)")
+                      i.fa.fa-reply(style="font-size:10px;")
+
+
+          .col-md-2.col-md-offset-1
+            .card-container.manual-flip
+              .card
+                .front
+                  .cover PUG code(npm)
+                  .branded
+                    i.fab.fa-node-js
+                  .content
+                    .main
+                      button.btn.btn-block.border-neon.btn-download(onclick="window.location.href='PDFs/pug.pdf';" download) View/Download
+                    .footer
+                      button.btn.btn-flip.btn-qr(onclick="rotateCard(this)")
+                        i.fa.fa-eye
+                        |  Content in PDF
+                // end front panel
+                
+                .back
+                  span
+                  span
+                  span
+                  span
+                  .content
+                    h5 Topics Covered 
+                    p &#x1f449 Installation
+                    p &#x1f449 Conditions
+                    p &#x1f449 Interpolations
+                    p &#x1f449 Interations
+                    p &#x1f449 Syntax & markup
+                                      
+                  .footer
+                    button.btn.btn-flip(rel="tooltip" title="Go Back" onclick="rotateCard(this)")
+                      i.fa.fa-reply(style="font-size:10px;")
+
+
+          .col-md-2.col-md-offset-1
+            .card-container.manual-flip
+              .card
+                .front
+                  .cover MongoDB
+                  .branded
+                    i.fad.fa-database
+                  .content
+                    .main
+                      button.btn.btn-block.border-neon.btn-download(onclick="window.location.href='PDFs/mongodb.pdf';" download) View/Download
+                    .footer
+                      button.btn.btn-flip.btn-qr(onclick="rotateCard(this)")
+                        i.fa.fa-eye
+                        |  Content in PDF
+                // end front panel
+                
+                .back
+                  span
+                  span
+                  span
+                  span
+                  .content
+                    h5 Topics Covered 
+                    p &#x1f449 CRUD operations
+                    p &#x1f449 Getting DB info
+                    p &#x1f449 Quering for data
+                    p &#x1f449 Update operators
+                    p &#x1f449 Collections
+                    p &#x1f449 Aggregation,Indexes
+                    p &#x1f449 Bulk operations
+                    p &#x1f449 Pluggable storage
+                    p &#x1f449 Java,Python drivers
+                    p &#x1f449 MongoDB authorization
+                    p &#x1f449 Backup restoring...
+                                       
+                  .footer
+                    button.btn.btn-flip(rel="tooltip" title="Go Back" onclick="rotateCard(this)")
+                      i.fa.fa-reply(style="font-size:10px;")
+
+
+          .col-md-2.col-md-offset-1
+            .card-container.manual-flip
+              .card
+                .front
+                  .cover NodeJS
+                  .branded
+                    i.fab.fa-node
+                  .content
+                    .main
+                      button.btn.btn-block.border-neon.btn-download(onclick="window.location.href='PDFs/nodejs.pdf';" download) View/Download
+                    .footer
+                      button.btn.btn-flip.btn-qr(onclick="rotateCard(this)")
+                        i.fa.fa-eye
+                        |  Content in PDF
+                // end front panel
+                
+                .back
+                  span
+                  span
+                  span
+                  span
+                  .content
+                    h5 Topics Covered 
+                    p &#x1f449 npm,npm with express
+                    p &#x1f449 File I/O,Modules
+                    p &#x1f449 Securing nodejs
+                    p &#x1f449 Mongoose lib
+                    p &#x1f449 Event emitters
+                    p &#x1f449 File upload
+                    p &#x1f449 MongoDB integration
+                    p &#x1f449 NodeJS framework
+                    p &#x1f449 GRUNT
+                    p &#x1f449 Good coding style
+                    p &#x1f449 Web notification
+                                    
+                  .footer
+                    button.btn.btn-flip(rel="tooltip" title="Go Back" onclick="rotateCard(this)")
+                      i.fa.fa-reply(style="font-size:10px;")
+
+
+          .col-md-2.col-md-offset-1
+            .card-container.manual-flip
+              .card
+                .front
+                  .cover Python(Advanced)
+                  .branded
+                    i.fab.fa-python
+                  .content
+                    .main
+                      button.btn.btn-block.border-neon.btn-download(onclick="window.location.href='PDFs/python.pdf';" download) View/Download
+                    .footer
+                      button.btn.btn-flip.btn-qr(onclick="rotateCard(this)")
+                        i.fa.fa-eye
+                        |  Content in PDF
+                // end front panel
+                
+                .back
+                  span
+                  span
+                  span
+                  span
+                  .content
+                    h5 Topics Covered 
+                    p &#x1f449 Python datatypes
+                    p &#x1f449 Indentation
+                    p &#x1f449 Operators
+                    p &#x1f449 Variables
+                    p &#x1f449 Loops,Arrays
+                    p &#x1f449 List,Links,Filter
+                    p &#x1f449 File I/O
+                    p &#x1f449 Functions,Classes
+                    p &#x1f449 Importing modules
+                    p &#x1f449 Base64 module
+                    p &#x1f449 Regular expressions
+                   
+                  .footer
+                    button.btn.btn-flip(rel="tooltip" title="Go Back" onclick="rotateCard(this)")
+                      i.fa.fa-reply(style="font-size:10px;")
+
+
+          .col-md-2.col-md-offset-1
+            .card-container.manual-flip
+              .card
+                .front
+                  .cover All Algorithms
+                  .branded
+                    i.fas.fa-code
+                  .content
+                    .main
+                      button.btn.btn-block.border-neon.btn-download(onclick="window.location.href='PDFs/algorithms.pdf';" download) View/Download
+                    .footer
+                      button.btn.btn-flip.btn-qr(onclick="rotateCard(this)")
+                        i.fa.fa-eye
+                        |  Content in PDF
+                // end front panel
+                
+                .back
+                  span
+                  span
+                  span
+                  span
+                  .content
+                    h5 Topics Covered 
+                    p &#x1f449 Big-O notation
+                    p &#x1f449 Trees,Graph
+                    p &#x1f449 Dijkstras,Krushkals
+                    p &#x1f449 Path finding
+                    p &#x1f449 Dynamic programming
+                    p &#x1f449 Greedy,Prims
+                    p &#x1f449 Sorting techs
+                    p &#x1f449 Searching techs
+                    p &#x1f449 Matrix exponentiation
+                    p &#x1f449 Dynamic time wrapping
+                    p &#x1f449 Pseudocode
+                   
+                  .footer
+                    button.btn.btn-flip(rel="tooltip" title="Go Back" onclick="rotateCard(this)")
+                      i.fa.fa-reply(style="font-size:10px;")
+
+
+          .col-md-2.col-md-offset-1
+            .card-container.manual-flip
+              .card
+                .front
+                  .cover Null
+                  .branded
+                    i.fab.fa-java
+                  .content
+                    .main
+                      button.btn.btn-block.border-neon.btn-download(onclick="window.location.href='PDFs/ - U6.pdf';" download) View/Download
+                    .footer
+                      button.btn.btn-flip.btn-qr(onclick="rotateCard(this)")
+                        i.fa.fa-eye
+                        |  Content in PDF
+                // end front panel
+                
+                .back
+                  span
+                  span
+                  span
+                  span
+                  .content
+                    h5 Topics Covered 
+                    p &#x1f449 
+                    p &#x1f449 
+                    p &#x1f449 
+                    p &#x1f449 
+                    p &#x1f449 
+                    p &#x1f449 
+                    p &#x1f449 
+                    p &#x1f449 
+                    p &#x1f449 
+                   
+                  .footer
+                    button.btn.btn-flip(rel="tooltip" title="Go Back" onclick="rotateCard(this)")
+                      i.fa.fa-reply(style="font-size:10px;")
+
+          .col-md-2.col-md-offset-1
+            .card-container.manual-flip
+              .card
+                .front
+                  .cover Null
+                  .branded
+                    i.fab.fa-java
+                  .content
+                    .main
+                      button.btn.btn-block.border-neon.btn-download(onclick="window.location.href='PDFs/ - U6.pdf';" download) View/Download
+                    .footer
+                      button.btn.btn-flip.btn-qr(onclick="rotateCard(this)")
+                        i.fa.fa-eye
+                        |  Content in PDF
+                // end front panel
+                
+                .back
+                  span
+                  span
+                  span
+                  span
+                  .content
+                    h5 Topics Covered 
+                    p &#x1f449 Java AWT
+                    p &#x1f449 AWT hierarchy
+                    p &#x1f449 Introduction to swings
+                    p &#x1f449 MVC of swings
+                    p &#x1f449 Diff b/w AWT & Swing
+                    p &#x1f449 Swing components
+                   
+                  .footer
+                    button.btn.btn-flip(rel="tooltip" title="Go Back" onclick="rotateCard(this)")
+                      i.fa.fa-reply(style="font-size:10px;")
+
+          .col-md-2.col-md-offset-1
+            .card-container.manual-flip
+              .card
+                .front
+                  .cover Null
+                  .branded
+                    i.fab.fa-java
+                  .content
+                    .main
+                      button.btn.btn-block.border-neon.btn-download(onclick="window.location.href='PDFs/ - U6.pdf';" download) View/Download
+                    .footer
+                      button.btn.btn-flip.btn-qr(onclick="rotateCard(this)")
+                        i.fa.fa-eye
+                        |  Content in PDF
+                // end front panel
+                
+                .back
+                  span
+                  span
+                  span
+                  span
+                  .content
+                    h5 Topics Covered 
+                    p &#x1f449 Java AWT
+                    p &#x1f449 AWT hierarchy
+                    p &#x1f449 Introduction to swings
+                    p &#x1f449 MVC of swings
+                    p &#x1f449 Diff b/w AWT & Swing
+                    p &#x1f449 Swing components
+                   
+                  .footer
+                    button.btn.btn-flip(rel="tooltip" title="Go Back" onclick="rotateCard(this)")
+                      i.fa.fa-reply(style="font-size:10px;")
+
+          .col-md-2.col-md-offset-1
+            .card-container.manual-flip
+              .card
+                .front
+                  .cover Null
+                  .branded
+                    i.fab.fa-java
+                  .content
+                    .main
+                      button.btn.btn-block.border-neon.btn-download(onclick="window.location.href='PDFs/ - U6.pdf';" download) View/Download
+                    .footer
+                      button.btn.btn-flip.btn-qr(onclick="rotateCard(this)")
+                        i.fa.fa-eye
+                        |  Content in PDF
+                // end front panel
+                
+                .back
+                  span
+                  span
+                  span
+                  span
+                  .content
+                    h5 Topics Covered 
+                    p &#x1f449 Java AWT
+                    p &#x1f449 AWT hierarchy
+                    p &#x1f449 Introduction to swings
+                    p &#x1f449 MVC of swings
+                    p &#x1f449 Diff b/w AWT & Swing
+                    p &#x1f449 Swing components
+                   
+                  .footer
+                    button.btn.btn-flip(rel="tooltip" title="Go Back" onclick="rotateCard(this)")
+                      i.fa.fa-reply(style="font-size:10px;")
+
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+    script(src="https://unpkg.com/splitting/dist/splitting.min.js")
+    script(src="https://kit.fontawesome.com/a076d05399.js")
+    script(src="https://cldup.com/S6Ptkwu_qA.js")
+    script.
+      Splitting();
+    script.
+      // ParticlesJS Config.
+      particlesJS("particles-js", {
+      "particles": {
+      "number": {
+      "value": 80,
+      "density": {
+      "enable": true,
+      "value_area": 700 } },
+      "color": {
+      "value": "#ffffff" },
+      "shape": {
+      "type": "circle",
+      "stroke": {
+      "width": 0,
+      "color": "#000000" },
+      "polygon": {
+      "nb_sides": 5 } },
+      "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+      "enable": false,
+      "speed": 0.1,
+      "opacity_min": 0.1,
+      "sync": false } },
+      "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+      "enable": false,
+      "speed": 10,
+      "size_min": 0.1,
+      "sync": false } },
+      "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1 },
+      "move": {
+      "enable": true,
+      "speed": 2,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+      "enable": false,
+      "rotateX": 600,
+      "rotateY": 1200 } } },
+      "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+      "onhover": {
+      "enable": true,
+      "mode": "grab" },
+      "onclick": {
+      "enable": true,
+      "mode": "push" },
+      "resize": true },
+      "modes": {
+      "grab": {
+      "distance": 140,
+      "line_linked": {
+      "opacity": 1 } },
+      "bubble": {
+      "distance": 400,
+      "size": 40,
+      "duration": 2,
+      "opacity": 8,
+      "speed": 3 },
+      "repulse": {
+      "distance": 200,
+      "duration": 0.4 },
+      "push": {
+      "particles_nb": 4 },
+      "remove": {
+      "particles_nb": 2 } } },
+      "retina_detect": true });
+   
+    script.
+      $(document).ready(function() {
+      $('#qrIos').qrcode({
+      width: 200,
+      height: 200,
+      text: "iOS_URL_HERE"
+      });
+      $('#qrAndroid').qrcode({
+      width: 200,
+      height: 200,
+      text: "DROID_URL_HERE"
+      });
+      $('#qrWeb').qrcode({
+      width: 200,
+      height: 200,
+      text: "WINDOWS_URL_HERE"
+      });
+      });
+      function rotateCard(btn) {
+      var $card = $(btn).closest('.card-container');
+      console.log($card);
+      if ($card.hasClass('hover')) {
+      $card.removeClass('hover');
+      } else {
+      $card.addClass('hover');
+      }
+      }
+
+    //- to hide all your code from being inpsect
+    script.
+        window.onload = function() {
+        document.addEventListener("contextmenu", function(e){
+        e.preventDefault();
+        }, false);
+        document.addEventListener("keydown", function(e) {
+        // "J" key
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        alert('not allowed');
+        disabledEvent(e);
+        }
+        // "F12" key
+        if (event.keyCode == 123) {
+        alert('not allowed');
+        disabledEvent(e);
+        }
+        }, false);
+        function disabledEvent(e){
+        if (e.stopPropagation){
+        e.stopPropagation();
+        } else if (window.event){
+        window.event.cancelBubble = true;
+        }
+        e.preventDefault();
+        return false;
+        }
+        };
+    
+    script.
+        document.onkeydown = function(e) {
+            if (e.ctrlKey && 
+                (e.keyCode === 67 || 
+                 e.keyCode === 86 || 
+                 e.keyCode === 73 || 
+                 e.keyCode === 85 || 
+                 e.keyCode === 117)) {
+                alert('not allowed');
+                return false;
+            } else {
+                return true;
+            }
+        };

@@ -1,0 +1,462 @@
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title GBR_Personal webpage
+    link(rel="stylesheet" href="plugins/animate.css")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css")
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
+    link(href="https://kit-pro.fontawesome.com/releases/v5.13.0/css/pro.min.css" rel="stylesheet")
+    script(src="https://code.jquery.com/jquery-git.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js")
+    script(src="javascripts/angular.min.js")
+
+  body 
+    ul.menu
+      li.menu-link
+        a.text-item(href="/about" style="text-decoration:none;white-space:nowrap;") About Me
+          span.icon &#x1f4e2
+      li.menu-link.sub
+        a.text-item(style="cursor:pointer;white-space:nowrap;text-decoration:none;") Education
+          span.icon &#x1f4bb
+        ul.submenu
+          li.sub-item
+            a(href="/javapdf" style="text-decoration:none;") &#x1f393 Java PDFs
+          li.sub-item
+            a(href="/meanstack" style="text-decoration:none;") &#x1f393 MEAN STACK PDFs
+          li.sub-item
+            a(href="/winshort" style="text-decoration:none;") &#x1f516 Windows10 Shortcuts
+          li.sub-item
+            a(href="#" style="text-decoration:none;") &#x1f393
+      li.menu-link.sub
+        a.text-item(href="#" style="text-decoration:none;") Entertainment
+          span.icon &#x1f3ac
+        ul.submenu
+          li.sub-item
+            a(href="#" style="text-decoration:none;") &#x1f3b6 Music Player
+          li.sub-item
+            a(href="/videosample" style="text-decoration:none;") &#x1f3a5 Movie Links
+      li.menu-link.sub
+        a.text-item(href="#" style="text-decoration:none;") Gallery
+          span.icon &#x1f3a8
+        ul.submenu
+          li.sub-item
+            a(href="/wallpaper" style="text-decoration:none;") &#x1f516 Wallpapers
+          li.sub-item
+            a(href="/quotes" style="text-decoration:none;") &#x1f3b6 Telugu quotes
+          li.sub-item
+            a(href="/videosample" style="text-decoration:none;") &#x1f3a5 My personal arts
+          li.sub-item
+            a(href="#" style="text-decoration:none;") &#x1f4dd Quilling arts
+          li.sub-item
+            a(href="#" style="text-decoration:none;") &#x1f304 Silk thread bangles
+      li.menu-link.sub
+        a.text-item(href="#" style="text-decoration:none;") Games
+          span.icon &#x1f3ae
+        ul.submenu
+          li.sub-item
+            a(href="/Snake_game" style="text-decoration:none;") &#x1f3af Snake game
+          li.sub-item
+            a(href="/2048_game" style="text-decoration:none;") &#x1f3af 2048
+          li.sub-item
+            a(href="/BullsEye" style="text-decoration:none;") &#x1f3af Arrow shooting
+          li.sub-item
+            a(href="/BirdShooting_game" style="text-decoration:none;") &#x1f3af Bird shooting 
+          li.sub-item
+            a(href="/TicTacToe" style="text-decoration:none;") &#x1f3af Tic-Tac-Toe
+      li.menu-link
+        a.text-item(href="/covid" style="text-decoration:none;white-space:nowrap;") Covid-19 Live
+          span.icon &#x1f4de
+      #btnclose(onclick="window.location.href='/index';") Home
+    
+  style.
+    #btnclose {
+    color: white;
+    letter-spacing:1.2px;
+    position: fixed;
+    border-radius:3px;
+    top: 0.6vw;
+    left: 0.6vw;
+    font: 1.2vw/1.1 "Helvetica Neue", Tahoma, Verdana;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    z-index: 1000;
+    opacity: 0.2; }
+    #btnclose:hover {
+    background-color:red;
+    cursor:pointer;
+    opacity: 1; }
+   
+    body {
+    overflow-y:hidden;
+    margin: 0;
+    font-family: "Barlow", sans-serif;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/a.jpg);
+    background-size:cover;
+    -webkit-tap-highlight-color: transparent;
+    }
+    body::-webkit-scrollbar
+    {
+    display: none; 
+    }
+    ul {
+    margin: 0;
+    padding: 0;
+    }
+    ul li {
+    list-style: none;
+    }
+    a {
+    text-decoration:none;
+    color: white;
+    }
+
+    .menu {
+    display: none;
+    /* Open Menu */
+    /* Animation - Close */
+    }
+    .menu.open {
+    display: flex;
+    z-index: 3;
+    overflow: hidden;
+    /* Menu Open - Main Link */
+    }
+    .menu.open .menu-link {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.4s ease-in-out;
+    animation: menu 0.6s ease forwards;
+    height: 100vh;
+    position: relative;
+    /* Main Link - text */
+    /* Sub Menu */
+    /* Menu Links - Hover */
+    }
+    @keyframes menu {
+    0% {
+    height: 0;
+    transform: translatey(-50%);
+    }
+    100% {
+    height: 100vh;
+    transform: translatey(0%);
+    }
+    }
+    .menu.open .menu-link:nth-child(1) {
+    background-color: #31C5C5;
+    animation-duration: 0.6s;
+    }
+    .menu.open .menu-link:nth-child(2) {
+    background-color: #412F49;
+    animation-duration: 0.8s;
+    }
+    .menu.open .menu-link:nth-child(3) {
+    background-color: #EE7C58;
+    animation-duration: 1s;
+    }
+    .menu.open .menu-link:nth-child(4) {
+    background-color: #F9C16E;
+    animation-duration: 1.2s;
+    }
+    .menu.open .menu-link:nth-child(5) {
+    background-color: #6B9449;
+    animation-duration: 1.2s;
+    }
+    .menu.open .menu-link:nth-child(6) {
+    background-color:#963A56;
+    animation-duration: 1.2s;
+    }
+    .menu.open .menu-link .text-item {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 4.4vw;
+    opacity: 0.3;
+    width: 100%;
+    height: 20%;
+    letter-spacing: 5px;
+    transform: rotate(-90deg) translateX(0px);
+    transition: all 0.4s 0.2s ease-in-out, letter-spacing 0.2s ease-in, opacity 0.2s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform-origin: center;
+    animation: text-in 0.6s ease;
+    position: absolute;
+    margin-top:-45px;
+    text-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 35px 25px rgba(0, 0, 0, 0.086),
+    0 20px 20px rgba(0, 0, 0, 0.12);
+    }
+  
+    @keyframes text-in {
+    0% {
+    opacity: 0;
+    }
+    20% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 0.3;
+    }
+    }
+    .menu.open .menu-link .text-item .icon {
+    position: absolute;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    transform: translateY(0px);
+    transition: all 0.4s ease-in-out;
+    background-image: url("https://rafaelalucas91.github.io/assets/icons/white/icon-54.svg");
+    }
+  
+    .menu.open .menu-link .submenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.6s ease-in-out;
+    height: 0%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    bottom: 0;
+    transform: translateY(50%);
+    position: absolute;
+    }
+   
+    .menu.open .menu-link .submenu .sub-item {
+    display: none;
+    margin: 10px 0;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+    padding: 5px 15px;
+    }
+  
+    .menu.open .menu-link .submenu .sub-item:after {
+    content: "";
+    height: 0%;
+    width: 3px;
+    background-color: white;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: height 0.4s 0.3s ease, width 0.4s ease;
+    }
+    .menu.open .menu-link .submenu .sub-item:hover:after {
+    width: 100%;
+    height: 100%;
+    z-index:-1;
+    transition: height 0.4s ease, width 0.4s 0.3s ease;
+    }
+    .menu.open .menu-link:hover {
+    width: 50%;
+    transition: all 0.4s ease-in-out;
+    /* When Click to Open Sub Menu */
+    }
+    .menu.open .menu-link:hover .text-item {
+    height: 50%;
+    transform: rotate(0deg) translateX(0px);
+    font-size: 30px;
+    opacity: 1;
+    letter-spacing: 10px;
+    }
+    .menu.open .menu-link:hover .text-item .icon {
+    opacity: 1;
+    transform: translateY(40px);
+    transition: all 0.3s 0.4s ease-in-out;
+    }
+    .menu.open .menu-link:hover.active .text-item {
+    transform: rotate(0deg) translateX(0px) translateY(-50%);
+    transform-origin: center center;
+    transition: all 0.6s ease-in-out;
+    }
+  
+    .menu.open .menu-link:hover.active .text-item .icon {
+    transition: all 0.3s ease-in-out;
+    transform: translateY(40px) rotate(-180deg);
+    }
+    .menu.open .menu-link:hover.active .submenu {
+    transform: translateY(0);
+    height: 70%;
+    z-index: 1;
+    opacity: 1;
+    bottom: 0;
+    }
+  
+    .menu.open .menu-link:hover.active .submenu .sub-item {
+    display: flex;
+    animation: submenu 1s ease forwards;
+    z-index: 2;
+    }
+    @keyframes submenu {
+    0% {
+    transform: translatex(50px) rotate(5-deg);
+    opacity: 0;
+    }
+    50% {
+    transform: translatex(50px) rotate(-5deg);
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    transform: translatex(0px) rotate(0deg);
+    }
+    }
+    .menu.open .menu-link:hover.active .submenu .sub-item:nth-child(1) {
+    animation-duration: 1s;
+    }
+    .menu.open .menu-link:hover.active .submenu .sub-item:nth-child(2) {
+    animation-duration: 1.3s;
+    }
+    .menu.open .menu-link:hover.active .submenu .sub-item:nth-child(3) {
+    animation-duration: 1.6s;
+    }
+    .menu.open .menu-link:hover.active .submenu .sub-item:nth-child(4) {
+    animation-duration: 1.9s;
+    }
+    .menu.open .menu-link:hover.active .submenu .sub-item:nth-child(5) {
+    animation-duration: 2.2s;
+    }
+    .menu.open .menu-link:hover.active .submenu .sub-item:nth-child(6) {
+    animation-duration: 2.5s;
+    }
+    .menu.open .menu-link:hover.active .submenu .sub-item:nth-child(7) {
+    animation-duration: 2.8s;
+    }
+    .menu.open .menu-link:hover.active .submenu .sub-item:nth-child(8) {
+    animation-duration: 3.1s;
+    }
+  
+    .menu.close .menu-link {
+    animation: menu-close 1s ease forwards;
+    }
+    @keyframes menu-close {
+    0% {
+    height: 100vh;
+    }
+    100% {
+    height: 0;
+    }
+    }
+    .menu.close .menu-link .text-item {
+    animation: text-out 0.6s ease forwards;
+    }
+    @keyframes text-out {
+    0% {
+    opacity: 0.3;
+    }
+    80% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 0;
+    }
+    }
+      
+
+  script.
+    //- var iconMenu = document.querySelector('#Submit'),
+    var menu = document.querySelector('.menu');
+    var menuLink = document.querySelectorAll('.menu-link.sub');
+
+    //- menu.addEventListener(openMenu());
+    window.onload = openMenu();
+    function openMenu() 
+    {
+      if(menu.classList.contains('open')) 
+      {
+        menu.classList.add('close');
+        //- classList.remove('icon-closed');
+        setTimeout(function() 
+        {
+          menu.classList.remove('open');
+        }, 1300);
+      } 
+      else
+      {
+        menu.classList.remove('close');
+        menu.classList.add('open');
+        //- classList.add('icon-closed');
+      }
+    }
+
+    menuLink.forEach(function(el) {
+    el.addEventListener('click', openSubmenu);
+    });
+    function openSubmenu(event) {
+    if (event.currentTarget.classList.contains("active")) {
+    event.currentTarget.classList.remove("active");
+    } else {
+    event.currentTarget.classList.add("active");
+    }
+    }
+
+  script.
+    window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    // "J" key
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+    alert('not allowed');
+    disabledEvent(e);
+    }
+    // "F12" key
+    if (event.keyCode == 123) {
+    alert('not allowed');
+    disabledEvent(e);
+    }
+    }, false);
+    function disabledEvent(e){
+    if (e.stopPropagation){
+    e.stopPropagation();
+    } else if (window.event){
+    window.event.cancelBubble = true;
+    }
+    e.preventDefault();
+    return false;
+    }
+    };
+    
+  script.
+    document.onkeydown = function(e) 
+    {
+      if(e.ctrlKey && 
+        (e.keyCode === 67 || 
+        e.keyCode === 86 || 
+        e.keyCode === 73 || 
+        e.keyCode === 85 || 
+        e.keyCode === 117)) {
+          alert('not allowed');
+        return false;
+        }
+        else {
+          return true;
+        }
+    };
+
+  

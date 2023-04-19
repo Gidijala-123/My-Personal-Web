@@ -1,0 +1,1086 @@
+html
+  head
+    meta(charset="UTF-8")
+    title My Personal details - GBR
+    link(href="http://fonts.googleapis.com/css?family=Rochester" rel="stylesheet" type="text/css")
+    link(rel="stylesheet" href="css/about.css")
+    link(href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css")
+    link(href="https://kit-pro.fontawesome.com/releases/v5.13.0/css/pro.min.css" rel="stylesheet")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css")
+    //- link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css") 
+        
+  body
+    .container
+      .col-lg-12.premium
+        header
+          h1
+            | Hello user &#x1f600
+          p Thank you for visiting my profile
+          .ui-kit
+            a(href="/animenu") Back
+    .container
+      .col-lg-8.col-md-6.col-sm-12
+        .container
+          .col-lg-6.col-md-12.col-sm-12
+            //- Profile pic
+            .user-card.card
+              .user-avatar
+                .user-bg(src="images/mypics/a(0).jpg")
+                img.user-pic(src="images/mypics/a(0).jpg")
+              header
+                h1.hh Bhargava_Gidijala
+                p Web-developer
+              marquee Never loose hope on success if you are a hardworker and never compare with anyone to get succeed in life.
+
+          .col-lg-6.col-md-12.col-sm-12
+            //- Graph
+            .gbrgraph
+              #graph-1-container.chart
+                h2.title Net visitors of this site
+                svg#chart-1.chart-line(viewbox="0 0 80 90")
+                  defs
+                    lineargradient#gradient-1
+                      stop(offset="0" stop-color="#954ce9")
+                      stop(offset="100" stop-color="#24c1ed")
+                    lineargradient#gradient-3
+                      stop(offset="0" stop-color="rgba(0, 213, 189, 1)" stop-opacity="0.07")
+                      stop(offset="0.5" stop-color="rgba(149, 76, 233, 1)" stop-opacity="0.13")
+                      stop(offset="1" stop-color="rgba(0, 213, 189, 1)" stop-opacity="0")
+                  
+                  ul
+                    li(style="float:left;border-right:2px solid white;padding-right:27.5px;")
+                      a(style="display: block;")
+                        strong(style="color:grey;") Page-Refreshed
+                        br
+                        span#CounterVisitor
+                    li(style="float:left;border-right:2px solid white;padding-left:27.5px;padding-right:27.5px;")
+                      a(style="display: block;")
+                        strong(style="color:grey;") Likes
+                        br
+                        span 934
+                    li(style="float:left;padding-left:27.5px;")
+                      a(style="display: block;")
+                        strong(style="color:grey;") Photos
+                        br
+                        span 48
+
+        .container
+          .video-player.card
+            .vbox
+              .thumbnail &#8195&#8195 Hello Everyone! Myself BhargavaGidijala,Im a MCA graduate from JNTUK. My home-town is Kakinada & my native place is Vijayawada Andhra-pradesh. I started designing from a young age and most of my design skills & knowledge are self-taught. I enjoy taking complex problems and turning them into simple and beautiful interface designs. I also love logic and structure of coding and always strive to write elegant and efficient coding wheather it might be HTML, CSS, AngularJS, MongoDB etc..I belive that unique and high-quality website designs attracts customers.
+
+            ul.unstyled.controls.table
+              li.play
+                span Click on colors to change Background 
+                span.fas.fa-arrow-alt-right
+              li.icon1
+              li.icon2
+              li.icon3
+              li.icon4
+             
+          //- Skills bar
+          .panel.panel-default
+            .panel-body
+              h2(style="text-align:center;padding-bottom:10px;margin:0px;") Technical skills &#x1f4bb
+              
+              .skillbar.clearfix(data-percent="75%")
+                .skillbar-title(style="background: #228DBE;")
+                  span CSS3
+                .skillbar-bar(style="background: #228DBE;")
+                .skill-bar-percent1 75%
+              
+              .skillbar.clearfix(data-percent="90%")
+                .skillbar-title(style="background: #E1DD6E;")
+                  span PUG
+                .skillbar-bar(style="background: #E1DD6E;")
+                .skill-bar-percent2 90%
+              
+              .skillbar.clearfix(data-percent="65%")
+                .skillbar-title(style="background: #6B5A80;")
+                  span MongoDB
+                .skillbar-bar(style="background: #6B5A80;")
+                .skill-bar-percent3 65%
+              
+              .skillbar.clearfix(data-percent="60%")
+                .skillbar-title(style="background:#EC6173;")
+                  span AngularJS
+                .skillbar-bar(style="background: #EC6173;")
+                .skill-bar-percent4 60%
+              
+              .skillbar.clearfix(data-percent="69%")
+                .skillbar-title(style="background:#F1AE4A;")
+                  span ExpressJS
+                .skillbar-bar(style="background: #F1AE4A;")
+                .skill-bar-percent5 69%
+              
+              .skillbar.clearfix(data-percent="85%")
+                .skillbar-title(style="background:#2c3e50;")
+                  span NodeJS
+                .skillbar-bar(style="background: #2c3e50;")
+                .skill-bar-percent6 85%
+             
+              .skillbar.clearfix(data-percent="80%")
+                .skillbar-title(style="background:#86BD52;")
+                  span Java(Basic)
+                .skillbar-bar(style="background: #86BD52;")
+                .skill-bar-percent7 80%
+              
+          //- Gallery
+          .gallery.card
+            .container
+              #jssor_1(style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:480px;overflow:hidden;visibility:hidden;")
+                // Loading Screen
+                .jssorl-009-spin(data-u="loading" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);")
+                  img(style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="images/spin.svg")
+                  
+                div(data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;border-radius:4px 4px 0px 0px;")
+                  div
+                    img(data-u="image" src="images/mypics/1.jpg" title="@Maredumalli waterfalls")
+                    img(data-u="thumb" src="images/mypics/1.jpg")
+                  div
+                    img(data-u="image" src="images/mypics/2.jpg" title="@kkd beach")
+                    img(data-u="thumb" src="images/mypics/2.jpg")
+                  div
+                    img(data-u="image" src="images/mypics/u.jpg" title="@Uppada beach")
+                    img(data-u="thumb" src="images/mypics/u.jpg")
+                  div
+                    img(data-u="image" src="images/mypics/4.jpg" title="@JNTUK Project-Event #Karim,#Vinay,#Swathi,#Lalitha,#Siri,#Anusha")
+                    img(data-u="thumb" src="images/mypics/4.jpg")
+                  div
+                    img(data-u="image" src="images/mypics/x.jpg" title="@KFC kkd")
+                    img(data-u="thumb" src="images/mypics/x.jpg")
+                  div
+                    img(data-u="image" src="images/mypics/6.jpg" title="With my MCA friends #Madhu,#Venu,#Vijay,#kiran,#Praveen,#Shiva")
+                    img(data-u="thumb" src="images/mypics/6.jpg")
+                  div
+                    img(data-u="image" src="images/mypics/7.jpg" title="@Corangi")
+                    img(data-u="thumb" src="images/mypics/7.jpg")
+                  div
+                    img(data-u="image" src="images/mypics/8.jpg" title="With my buddies Manikanta,Vamsi,Karim,Shiva,Venkatesh")
+                    img(data-u="thumb" src="images/mypics/8.jpg")
+                  div
+                    img(data-u="image" src="images/mypics/9.jpg" title="@uppada beach")
+                    img(data-u="thumb" src="images/mypics/9.jpg")
+                  div
+                    img(data-u="image" src="images/mypics/10.jpg" title="@NTR beach kkd")
+                    img(data-u="thumb" src="images/mypics/10.jpg")
+                  div
+                    img(data-u="image" src="images/mypics/mom.jpg" title="With my mom")
+                    img(data-u="thumb" src="images/mypics/mom.jpg")
+                a(data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;") web animation
+                //- Thumbnails Navigator
+                .jssort101(data-u="thumbnavigator" style="position:absolute;left:0px;bottom:0px;width:985px;height:100px;background-color:black;" data-autocenter="1" data-scale-bottom="0.75")
+                  div(data-u="slides")
+                    .p(data-u="prototype" style="width:195px;height:90px;")
+                      .t(data-u="thumbnailtemplate")
+                      svg.cv(viewbox="0 0 16000 16000")
+                        circle.a(cx="8000" cy="8000" r="3238.1")
+                        line.a(x1="6190.5" y1="8000" x2="9809.5" y2="8000")
+                        line.a(x1="8000" y1="9809.5" x2="8000" y2="6190.5")
+                //- Arrow Navigator
+                .jssora106(data-u="arrowleft" style="width:55px;height:55px;top:320px;left:0px;" data-scale="0.75")
+                  svg(viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;")
+                    circle.c(cx="8000" cy="8000" r="6260.9")
+                    polyline.a(points="7930.4,5495.7 5426.1,8000 7930.4,10504.3 ")
+                    line.a(x1="10573.9" y1="8000" x2="5426.1" y2="8000")
+                .jssora106(data-u="arrowright" style="width:55px;height:55px;top:320px;right:0px;" data-scale="0.75")
+                  svg(viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;")
+                    circle.c(cx="8000" cy="8000" r="6260.9")
+                    polyline.a(points="8069.6,5495.7 10573.9,8000 8069.6,10504.3 ")
+                    line.a(x1="5426.1" y1="8000" x2="10573.9" y2="8000")
+          
+      .col-lg-4.col-md-6.col-sm-12
+        .container
+          //- LinkedIn Dashboard
+          .col-lg-12
+            .card.lin
+              ul.unstyled.txt
+                li
+                  img.mm(src="images/linkedin.png")
+                  input.inp(type="text" placeholder="Search")
+                  a(href="https://www.linkedin.com/in/bhargavagidijala" style="text-decoration:none;padding-left:10px;" title="Go-to-Homepage") &#x1f3e0
+                  a(style="cursor:not-allowed;padding-left:5px;") &#x1f4e9
+                
+              #marqueecontainer(onmouseover="copyspeed=pausespeed" onmouseout="copyspeed=marqueespeed")
+                #vmarquee
+                  p(style="float:right;padding:3px 5px 0px 0px;font-size:19px;color:red;") &#9825
+                  br
+                  img.cmt(src="images/comment/1.jpg" align="left")
+                  strong.cl Deepak Mehtha
+                  br
+                  | Success and failure are essense of life.Never get depressed for failure!
+                  br
+                  p(style="word-spacing:8px;padding-left:48.5px;") 1hr 7Likes Reply
+                  p(style="padding-left:48.5px;") &#8211&#8211&#8211 View Replies(3)
+                  p(style="float:right;padding:3px 5px 0px 0px;font-size:19px;color:red;") &#9825
+                  br
+
+                  img.cmt(src="images/comment/2.jpg" align="left")
+                  strong.cl Jogendra singh
+                  br
+                  | Finally i got my PhD.Thanks to everyone who blessed me,care,love and trust me
+                  br
+                  p(style="word-spacing:8px;padding-left:48.5px;") 4hrs 86Likes Reply
+                  p(style="padding-left:48.5px;") &#8211&#8211&#8211 View Replies(43)
+                  p(style="float:right;padding:3px 5px 0px 0px;color:red;") &#10084
+                  br
+
+                  img.cmt(src="images/comment/3.jpg" align="left")
+                  strong.cl Praddyum shukla
+                  br
+                  | Im really happy to share that my application
+                  br
+                  p(style="word-spacing:8px;padding-left:48.5px;") 12hrs 159Likes Reply
+                  p(style="padding-left:48.5px;") &#8211&#8211&#8211 View Replies(63)
+                  p(style="float:right;padding:3px 5px 0px 0px;color:red;") &#10084
+                  br
+
+                  img.cmt(src="images/comment/5.jpg" align="left")
+                  strong.cl Sarjana reddy
+                  br
+                  | Today im happy and grateful for qualifying UPSC civil service examination
+                  |securing All india 126 rank.
+                  br
+                  p(style="word-spacing:8px;padding-left:48.5px;") 19hrs 645Likes Reply
+                  p(style="padding-left:48.5px;") &#8211&#8211&#8211 View Replies(233)
+                  p(style="float:right;padding:3px 5px 0px 0px;color:red;") &#10084
+                  br
+
+                  img.cmt(src="images/comment/10.jpg" align="left")
+                  strong.cl Deepak Mehtha
+                  br
+                  | Deepak Singh Rawat Simple marquee text pure java script created
+                  br
+                  p(style="word-spacing:8px;padding-left:48.5px;") 1day 32Likes Reply
+                  p(style="padding-left:48.5px;") &#8211&#8211&#8211 View Replies(21)
+                  p(style="float:right;padding:3px 5px 0px 0px;font-size:19px;color:red;") &#9825
+                  br
+
+                  img.cmt(src="images/comment/11.jpg" align="left")
+                  strong.cl Deepak Mehtha
+                  br
+                  | Deepak Singh Rawat Simple marquee text pure java script created
+                  br
+                  p(style="word-spacing:8px;padding-left:48.5px;") 1d-3hrs 27Likes Reply
+                  p(style="padding-left:48.5px;") &#8211&#8211&#8211 View Replies(11)
+                  p(style="float:right;padding:3px 5px 0px 0px;font-size:19px;color:red;") &#9825
+                  br
+
+                  img.cmt(src="images/comment/11.jpg" align="left")
+                  strong.cl Deepak Mehtha
+                  br
+                  | Deepak Singh Rawat Simple marquee text pure java script created
+                  br
+                  p(style="word-spacing:8px;padding-left:48.5px;") 1d-3hrs 27Likes Reply
+                  p(style="padding-left:48.5px;") &#8211&#8211&#8211 View Replies(11)
+                  p(style="float:right;padding:3px 5px 0px 0px;font-size:19px;color:red;") &#9825
+                  br
+
+                  img.cmt(src="images/comment/11.jpg" align="left")
+                  strong.cl Deepak Mehtha
+                  br
+                  | Deepak Singh Rawat Simple marquee text pure java script created
+                  br
+                  p(style="word-spacing:8px;padding-left:48.5px;") 1d-3hrs 27Likes Reply
+                  p(style="padding-left:48.5px;") &#8211&#8211&#8211 View Replies(11)
+                  p(style="float:right;padding:3px 5px 0px 0px;font-size:19px;color:red;") &#9825
+                  br
+
+                  img.cmt(src="images/comment/11.jpg" align="left")
+                  strong.cl Deepak Mehtha
+                  br
+                  | Deepak Singh Rawat Simple marquee text pure java script created
+                  br
+                  p(style="word-spacing:8px;padding-left:48.5px;") 1d-3hrs 27Likes Reply
+                  p(style="padding-left:48.5px;") &#8211&#8211&#8211 View Replies(11)
+                  p(style="float:right;padding:3px 5px 0px 0px;font-size:19px;color:red;") &#9825
+                  br
+
+                  img.cmt(src="images/comment/11.jpg" align="left")
+                  strong.cl Deepak Mehtha
+                  br
+                  | Deepak Singh Rawat Simple marquee text pure java script created
+                  br
+                  p(style="word-spacing:8px;padding-left:48.5px;") 1d-3hrs 27Likes Reply
+                  p(style="padding-left:48.5px;") &#8211&#8211&#8211 View Replies(11)
+                  p(style="float:right;padding:3px 5px 0px 0px;font-size:19px;color:red;") &#9825
+                  br
+
+                  img.cmt(src="images/comment/11.jpg" align="left")
+                  strong.cl Deepak Mehtha
+                  br
+                  | Deepak Singh Rawat Simple marquee text pure java script created
+                  br
+                  p(style="word-spacing:8px;padding-left:48.5px;") 1d-3hrs 27Likes Reply
+                  p(style="padding-left:48.5px;") &#8211&#8211&#8211 View Replies(11)
+                  p(style="float:right;padding:3px 5px 0px 0px;font-size:19px;color:red;") &#9825
+                  br
+
+                  img.cmt(src="images/comment/7.jpg" align="left")
+                  strong.cl Priyanka yadav
+                  br
+                  | Today i completed a course on wind energy from technical university of Denmark(COURSERA).
+                  br
+                  p(style="word-spacing:8px;padding-left:48.5px;") 2d 532Likes Reply
+                  p(style="padding-left:48.5px;") &#8211&#8211&#8211 View Replies(327)
+                  //- p(style="float:right;padding:3px 5px 0px 0px;font-size:19px;color:red;") &#9825
+          //- Calendar
+          .col-lg-12
+            #calendar
+            #formDiv(style="padding:0 20px 20px 20px")
+              legend
+                h2  Make a Event 
+              form(name="myForm" onsubmit="myFunc()")
+                table
+                  tr
+                    td.td Title:
+                    td
+                      input.iinp#eventName(type="text" name="eventName" required="")
+                  tr
+                    td.td Type:
+                    td(style="display: flex;")
+                      select.iinp#eventType.selectMenu(name="eventType" onchange="displayCol()" required="")
+                        option(value="") Select One
+                        option(value="Event") Event
+                        option(value="Pending-List") Pending-List
+                        option(value="Urgent-Tasks") Urgent-Tasks
+                      #eventColor
+                  tr
+                    td.td Date:
+                    td
+                      input.iinp#eventDate(type="date" name="eventDate" required="")
+                  tr
+                    td
+                      input#addEventBTN(type="submit" value="Add Event")
+                    td
+                      button#closeBTN(onclick="closeForm()" form="noForm") Cancel
+          .col-lg-12
+            .main-menu.card
+              ul.unstyled
+                li
+                  a
+                    span.icon.icon-dashboard
+                    .badge 1
+                    .title Dashboard
+                li
+                  a
+                    span.icon.icon-user
+                    .badge.green 8
+                    .title Profile
+                li.orange
+                  a
+                    span.icon.icon-envelope
+                    .badge 14
+                    .title Messages
+                  ul.unstyled
+                    li
+                      a
+                        span.icon.icon-inbox
+                        .title Inbox
+                    li
+                      a
+                        span.icon.icon-location-arrow
+                        .title Sent
+                    li
+                      a
+                        span.icon.icon-trash
+                        .title Deleted
+                li
+                  a
+                    span.icon.icon-cog
+                    .badge 16
+                    .title Settings
+
+    .cals
+      .titlec
+        h1 Todo tasks
+        p GBR's
+      .containerc
+        nav.todo_nav
+          ul.todo_select
+            li.active(style="margin-left:22px") All tasks
+            li(style="margin-left:22px") Pending
+            li Completed
+        .todo_content
+
+          .content_add.active
+            .todo_tips
+              .table-responsive                          
+                table.table.table-bordered
+                  thead(style="text-align:center;")
+                    tr
+                      //- th.th1 Sno
+                      //- th.th1 MongoID
+                      th.th1 Task no.
+                      th.th2 Name of the task
+                      th.th1 Status
+                      th.th1 Action
+                  tbody
+                    each member in data
+                      tr
+                        //- td.td1
+                        //- td.td6 #{member._id}
+                        td.td1 #{member.tno}
+                        td.td2 #{member.tname}
+                        td.td1 #{member.status}
+                        td.td1
+                          button.btn.bbb(value=member.tno) Done?
+                
+          .content_pending
+            .todo_tips
+              .table-responsive
+                table.table.table-bordered
+                  thead(style="text-align:center;font-size:20px;")
+                    tr
+                      //- th.th1 Sno
+                      th.th1 Task no.
+                      th.th2 Name of the task
+                      th.th1 Status
+                  tbody
+                    each member in data1
+                      tr
+                        //- td.td1
+                        td.td1 #{member.tno}
+                        td.td2 #{member.tname}
+                        td.td1 #{member.status}
+                    
+          .content_done
+            .todo_tips
+              .table-responsive
+                table.table.table-bordered
+                  thead(style="text-align:center;font-size:20px;")
+                    tr
+                      //- th.th1 Sno
+                      th.th1 Task no.
+                      th.th2 Name of the task
+                      th.th1 Status
+                  tbody
+                    each member in data2
+                      tr
+                        //- td.td1
+                        td.td1 #{member.tno}
+                        td.td2 #{member.tname}
+                        td.td1 #{member.status}
+                    
+        .todo_info
+          .info_btn.active Click to add a task
+          .info_input.info_init
+            form#create_form(action='/hh',method='post')
+              .form_content
+                input#todo_input.input_style1(name="tno" type="text" placeholder="Enter Roll.no")
+                input#todo_input.input_style2(name="tname" type="text" placeholder="Enter your task")
+                input#todo_submit.submit_style(type="submit" name="submit" value="Submit")
+                .remove_input
+                  i.fa.fa-times
+          
+    .messages
+      .messages-box
+        .message.notice
+          button.close(data-close="true")
+          .message-text You are logged in.
+    footer.container
+      .illustration.card
+        p  Prepared and designed by Bhargava_Gidijala &#x1f600
+    
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js")
+    script(src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.14/js/lightgallery-all.min.js")
+    script(src="javascripts/jssor.slider-28.0.0.min.js" type="text/javascript")
+    script(src="javascripts/about.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script.
+      window.document.onload = myFunc();
+      function closeForm() {
+      var x = document.getElementById("formDiv");
+      var y = document.getElementsByClassName("addBTN")[0];
+      x.style.display = "none";
+      y.style.transform = "rotate(90deg)";
+      }
+      function toggleForm() {
+      var x = document.getElementById("formDiv");
+      var y = document.getElementsByClassName("addBTN")[0];
+      if (x.style.display == "none") {
+      x.style.display = "block";
+      y.style.transform = "rotate(45deg)";
+      } else {
+      x.style.display = "none";
+      y.style.transform = "rotate(90deg)";
+      }
+      }
+      function displayCol() {
+      var eventType = document.myForm.eventType.value;
+      var eventColor = "";
+      switch (eventType) {
+      case "Event":
+      eventColor = "#08FB08";
+      break;
+      case "Pending-List":
+      eventColor = "yellow";
+      break;
+      case "Urgent-Tasks":
+      eventColor = "aqua";
+      break;
+      default:
+      eventColor = "green";
+      }
+      $("#eventColor").css("background", eventColor);
+      }
+      function myFunc() {
+      var today = moment();
+      function Calendar(selector, events) {
+      this.el = document.querySelector(selector);
+      this.events = events;
+      this.current = moment().date(1);
+      if (this.el.innerHTML != "") {
+      this.el.innerHTML = "";
+      this.draw();
+      } else {
+      this.draw();
+      }
+      var current = document.querySelector(".today");
+      if (current) {
+      var self = this;
+      window.setTimeout(function() {
+      self.openDay(current);
+      }, 500);
+      }
+      }
+      Calendar.prototype.draw = function() {
+      //Create Header
+      this.drawHeader();
+      //Draw Month
+      this.drawMonth();
+      this.drawButton();
+      this.drawLegend();
+      };
+      Calendar.prototype.drawHeader = function() {
+      var self = this;
+      if (!this.header) {
+      //Create the header elements
+      this.header = createElement("div", "header");
+      this.header.className = "header";
+      this.title = createElement("h1");
+      var right = createElement("div", "right");
+      right.addEventListener("click", function() {
+      self.nextMonth();
+      });
+      var left = createElement("div", "left");
+      left.addEventListener("click", function() {
+      self.prevMonth();
+      });
+      //Append the Elements
+      this.header.appendChild(this.title);
+      this.header.appendChild(right);
+      this.header.appendChild(left);
+      this.el.appendChild(this.header);
+      }
+      this.title.innerHTML = this.current.format("MMMM YYYY");
+      };
+      Calendar.prototype.drawMonth = function() {
+      var self = this;
+      this.events.forEach(function(ev) {
+      ev.date = moment(ev.date, "YYYY-MM-DD");
+      });
+      if (this.month) {
+      this.oldMonth = this.month;
+      this.oldMonth.className = "month out " + (self.next ? "next" : "prev");
+      this.oldMonth.addEventListener("webkitAnimationEnd", function() {
+      self.oldMonth.parentNode.removeChild(self.oldMonth);
+      self.month = createElement("div", "month");
+      self.backFill();
+      self.currentMonth();
+      self.fowardFill();
+      self.el.appendChild(self.month);
+      window.setTimeout(function() {
+      self.month.className = "month in " + (self.next ? "next" : "prev");
+      }, 16);
+      });
+      } else {
+      this.month = createElement("div", "month");
+      this.el.appendChild(this.month);
+      this.backFill();
+      this.currentMonth();
+      this.fowardFill();
+      this.month.className = "month new";
+      }
+      };
+      Calendar.prototype.backFill = function() {
+      var clone = this.current.clone();
+      var dayOfWeek = clone.day();
+      if (!dayOfWeek) {
+      return;
+      }
+      clone.subtract(dayOfWeek + 1, "days");
+      for (var i = dayOfWeek; i > 0; i--) {
+      this.drawDay(clone.add(1, "days"));
+      }
+      };
+      Calendar.prototype.fowardFill = function() {
+      var clone = this.current
+      .clone()
+      .add(1, "months")
+      .subtract(1, "days");
+      var dayOfWeek = clone.day();
+      if (dayOfWeek === 6) {
+      return;
+      }
+      for (var i = dayOfWeek; i < 6; i++) {
+      this.drawDay(clone.add(1, "days"));
+      }
+      };
+      Calendar.prototype.currentMonth = function() {
+      var clone = this.current.clone();
+      while (clone.month() === this.current.month()) {
+      this.drawDay(clone);
+      clone.add(1, "days");
+      }
+      };
+      Calendar.prototype.getWeek = function(day) {
+      if (!this.week || day.day() === 0) {
+      this.week = createElement("div", "week");
+      this.month.appendChild(this.week);
+      }
+      };
+      Calendar.prototype.drawDay = function(day) {
+      var self = this;
+      this.getWeek(day);
+      //Outer Day
+      var outer = createElement("div", this.getDayClass(day));
+      if (outer.className.indexOf("other") == -1) {
+      outer.addEventListener("click", function() {
+      self.openDay(this);
+      });
+      }
+      //Day Name
+      var name = createElement("div", "day-name", day.format("ddd"));
+      //Day Number
+      var number = createElement("div", "day-number", day.format("DD"));
+      //Events
+      var events = createElement("div", "day-events");
+      this.drawEvents(day, events);
+      outer.appendChild(name);
+      outer.appendChild(number);
+      outer.appendChild(events);
+      this.week.appendChild(outer);
+      };
+      Calendar.prototype.drawEvents = function(day, element) {
+      if (day.month() === this.current.month()) {
+      var todaysEvents = this.events.reduce(function(memo, ev) {
+      if (ev.date.isSame(day, "day")) {
+      memo.push(ev);
+      }
+      return memo;
+      }, []);
+      todaysEvents.forEach(function(ev) {
+      var evSpan = createElement("span", ev.color);
+      element.appendChild(evSpan);
+      });
+      }
+      };
+      Calendar.prototype.getDayClass = function(day) {
+      classes = ["day"];
+      if (day.month() !== this.current.month()) {
+      classes.push("other");
+      } else if (today.isSame(day, "day")) {
+      classes.push("today");
+      }
+      return classes.join(" ");
+      };
+      Calendar.prototype.openDay = function(el) {
+      var details, arrow;
+      var dayNumber =
+      +el.querySelectorAll(".day-number")[0].innerText ||
+      +el.querySelectorAll(".day-number")[0].textContent;
+      var day = this.current.clone().date(dayNumber);
+      var currentOpened = document.querySelector(".details");
+      //Check to see if there is an open detais box on the current row
+      // if (currentOpened && currentOpened.parentNode === el.parentNode) {
+      //   details = currentOpened;
+      //   arrow = document.querySelector(".arrow");
+      // } else {
+      //Close the open events on differnt week row
+      //currentOpened && currentOpened.parentNode.removeChild(currentOpened);
+      if (currentOpened) {
+      currentOpened.addEventListener("webkitAnimationEnd", function() {
+      currentOpened.parentNode.removeChild(currentOpened);
+      });
+      currentOpened.addEventListener("oanimationend", function() {
+      currentOpened.parentNode.removeChild(currentOpened);
+      });
+      currentOpened.addEventListener("msAnimationEnd", function() {
+      currentOpened.parentNode.removeChild(currentOpened);
+      });
+      currentOpened.addEventListener("animationend", function() {
+      currentOpened.parentNode.removeChild(currentOpened);
+      });
+      currentOpened.className = "details out";
+      }
+      //Create the Details Container
+      details = createElement("div", "details in");
+      var group1 = createElement("div", "detailsHeader");
+      var todayDate = createElement("div", "todayDate", el.innerText);
+      //Create the arrow
+      //                            var arrow = createElement('div', 'arrow');
+      //Create the event wrapper
+      //                            details.appendChild(arrow);
+      group1.appendChild(todayDate);
+      details.appendChild(group1);
+      el.parentNode.parentNode.insertBefore(
+      details,
+      el.parentNode.parentNode.childNodes[0]
+      );
+      // }
+      var todaysEvents = this.events.reduce(function(memo, ev) {
+      if (ev.date.isSame(day, "day")) {
+      memo.push(ev);
+      }
+      return memo;
+      }, []);
+      this.renderEvents(todaysEvents, details);
+      // arrow.style.left = el.offsetLeft - el.parentNode.offsetLeft + 27 + "px";
+      };
+      Calendar.prototype.renderEvents = function(events, ele) {
+      //Remove any events in the current details element
+      var currentWrapper = ele.querySelector(".events");
+      var wrapper = createElement(
+      "div",
+      "events in" + (currentWrapper ? " new" : "")
+      );
+      events.forEach(function(ev) {
+      var div = createElement("div", "event");
+      var group1 = createElement("div", "eventgrp");
+      var group2 = createElement("div", "eventgrp");
+      var square = createElement("div", "event-category " + ev.color);
+      var span = createElement("span", "", ev.eventName);
+      var del = createElement("button", "delBTN");
+      group1.appendChild(square);
+      group1.appendChild(span);
+      group2.appendChild(del);
+      div.appendChild(group1);
+      div.appendChild(group2);
+      del.addEventListener("click", function() {
+      delEvent(ev);
+      });
+      wrapper.appendChild(div);
+      });
+      if (!events.length) {
+      var div = createElement("div", "event empty");
+      var span = createElement("span", "", "No Events");
+      div.appendChild(span);
+      wrapper.appendChild(div);
+      }
+      if (currentWrapper) {
+      currentWrapper.className = "events out";
+      currentWrapper.addEventListener("webkitAnimationEnd", function() {
+      currentWrapper.parentNode.removeChild(currentWrapper);
+      ele.appendChild(wrapper);
+      });
+      currentWrapper.addEventListener("oanimationend", function() {
+      currentWrapper.parentNode.removeChild(currentWrapper);
+      ele.appendChild(wrapper);
+      });
+      currentWrapper.addEventListener("msAnimationEnd", function() {
+      currentWrapper.parentNode.removeChild(currentWrapper);
+      ele.appendChild(wrapper);
+      });
+      currentWrapper.addEventListener("animationend", function() {
+      currentWrapper.parentNode.removeChild(currentWrapper);
+      ele.appendChild(wrapper);
+      });
+      } else {
+      ele.appendChild(wrapper);
+      }
+      };
+      Calendar.prototype.drawLegend = function() {
+      var legend = createElement("div", "legend");
+      var calendars = this.events
+      .map(function(e) {
+      return e.calendar + "|" + e.color;
+      })
+      .reduce(function(memo, e) {
+      if (memo.indexOf(e) === -1) {
+      memo.push(e);
+      }
+      return memo;
+      }, [])
+      .forEach(function(e) {
+      var parts = e.split("|");
+      var entry = createElement("span", "entry " + parts[1], parts[0]);
+      legend.appendChild(entry);
+      });
+      var legendDOM = document.getElementsByClassName("legend");
+      if (legendDOM.length != 0) {
+      this.el.replaceChild(legend, legendDOM[0]);
+      } else {
+      this.el.appendChild(legend);
+      }
+      };
+      Calendar.prototype.drawButton = function() {
+      var addBTN = document.querySelector(".addBTN");
+      if (addBTN == null) {
+      addBTN = createElement("div", "addBTN");
+      addBTN.addEventListener("click", function() {
+      toggleForm();
+      });
+      }
+      this.el.appendChild(addBTN);
+      };
+      Calendar.prototype.nextMonth = function() {
+      this.current.add(1, "months");
+      this.next = true;
+      this.draw();
+      closeForm();
+      var self = this;
+      window.setTimeout(function() {
+      var today = document.querySelector(".today");
+      var first = document.querySelector(".day:not(.other)");
+      if (today) {
+      window.setTimeout(function() {
+      self.openDay(today);
+      }, 500);
+      } else {
+      window.setTimeout(function() {
+      self.openDay(first);
+      }, 500);
+      }
+      }, 500);
+      };
+      Calendar.prototype.prevMonth = function() {
+      this.current.subtract(1, "months");
+      this.next = false;
+      this.draw();
+      closeForm();
+      var self = this;
+      window.setTimeout(function() {
+      var today = document.querySelector(".today");
+      var first = document.querySelector(".day:not(.other)");
+      if (today) {
+      window.setTimeout(function() {
+      self.openDay(today);
+      }, 500);
+      } else {
+      window.setTimeout(function() {
+      self.openDay(first);
+      }, 500);
+      }
+      }, 500);
+      };
+      window.Calendar = Calendar;
+      function createElement(tagName, className, innerText) {
+      var ele = document.createElement(tagName);
+      if (className) {
+      ele.className = className;
+      }
+      if (innerText) {
+      ele.innderText = ele.textContent = innerText;
+      }
+      return ele;
+      }
+      var eventName = document.myForm.eventName.value;
+      var eventType = document.myForm.eventType.value;
+      var eventColor = "";
+      var eventDate = document.myForm.eventDate.value;
+      switch (eventType) {
+      case "Event":
+      eventColor = "blue";
+      break;
+      case "Pending-List":
+      eventColor = "orange";
+      break;
+      case "Urgent-Tasks":
+      eventColor = "yellow";
+      break;
+      default:
+      eventColor = "green";
+      }
+      var data = JSON.parse(localStorage.getItem("data"));
+      if (data == null) data = [];
+      if (eventName != "" && eventType != "" && eventColor != "" && eventDate != "")
+      data.push({
+      eventName: eventName,
+      calendar: eventType,
+      color: eventColor,
+      date: eventDate
+      });
+      for (var a of data) {
+      console.log(a);
+      }
+      //- localStorage.removeItem("data");
+      localStorage.setItem("data", JSON.stringify(data));
+      /*var data = [
+      {eventName: 'Lunch Meeting 1', calendar: 'Home', color: 'blue', date: '2019-06-25'}
+      ];*/
+      function delEvent(events) {
+      var a = data.indexOf(events);
+      var b = confirm(
+      "Are you sure to remove this data\nwith Title - " +
+      events.eventName+
+      "\nof Type - " +
+      events.calendar+
+      "\nwith Date - " +
+      events.date._i +
+      "?"
+      );
+      if (b) {
+      var c = data.splice(a, 1);
+      /*for(var z in data)
+      console.log(z);*/
+      localStorage.setItem("data", JSON.stringify(data));
+      //- localStorage.removeItem("data");
+      for (var a of data) {
+      console.log(a);
+      }
+      var calendar = new Calendar("#calendar", data);
+      if (c) {
+      alert("Event deleted successfully");
+      } else {
+      alert("Failed to delete event");
+      }
+      } else {
+      //alert("Cancelled deletion");
+      }
+      }
+      var calendar = new Calendar("#calendar", data);
+      document.myForm.eventName.value = "";
+      document.myForm.eventType.value = "";
+      document.myForm.eventDate.value = "";
+      toggleForm();
+      }
+    script.
+      $(document).ready(() => {
+      $("#lightgallery").lightGallery({
+      pager: true
+      });
+      });
+
+      //-Todo task 
+    script.
+      var counter = 3;
+      // 🍊🍊🍊🍊🍊 NAVBAR ANIMATION 🍊🍊🍊🍊🍊
+      $('.todo_select li').click(function () {
+      var choose = $( this ).index() + 1;
+      // add tag class
+      $('.todo_select li').removeClass('active');
+      $( this ).addClass('active');
+      // add content class
+      $('.todo_content div').removeClass('active');
+      $( '.todo_content div:nth-child(' + choose + ')' ).addClass('active');
+      });
+      // 🍆🍆🍆🍆🍆 TODO Pages ANIMATION 🍆🍆🍆🍆🍆
+      $('.info_btn').click(function(){
+      $('.info_btn').removeClass('active');
+      $('.info_init').addClass('active');
+      });
+      $('form .remove_input').click(function(){
+      $('.todo_info').children().removeClass('active');
+      $('.info_btn').addClass('active');
+      });    
+    script.
+     $(document).ready(function()
+      {
+      // for status > transfer button
+          $('.bbb').click(function()
+          {
+           var aa=$(this).val();
+            $.post('/change',{"tno":aa},function(data)
+            {
+              alert("Status changed successfully..!");
+              location.reload('/about');
+            });
+          });
+        
+
+      // to change the status color after clicking on transfer button
+          $("td").each(function(){
+              if($(this).text()=="Pending"){
+                  $(this).css("backgroundColor","#FD052E");
+                  $(this).css("color","white");
+              }
+              if($(this).text()=="Completed"){
+                  $(this).css("backgroundColor","#85FD2D");
+                  $(this).css("color","black"); 
+              }
+          });
+          
+      // for posting update data on click
+        //- $('.edit').click(function()
+        //-   {
+        //-     var a=$(this).val();
+        //-     $.post('/edit',{tno:a},function(data3)
+        //-     {
+        //-       var a=JSON.stringify(data3);
+        //-       var b=JSON.parse(a);
+                  
+        //-       $('#Date').val(b[0].Date);  
+        //-       $('#Time').val(b[0].Time);
+        //-       $('#tno').val(b[0].tno);        
+        //-       $('#sname').val(b[0].sname);
+        //-       $('#clg').val(b[0].clg);
+        //-       $('#brch').val(b[0].brch);
+        //-       $('#year').val(b[0].year);
+        //-       $('#sec').val(b[0].sec);
+        //-       $('#spno').val(b[0].spno); 
+        //-       $('#pname').val(b[0].pname);
+        //-       $('#ppno').val(b[0].ppno);
+        //-       $('#mmodel').val(b[0].mmodel);
+        //-       $('#imei').val(b[0].imei);
+        //-       $('#mclr').val(b[0].mclr);
+        //-       $('#rsn').val(b[0].rsn);
+        //-       $('#ename').val(b[0].ename);
+        //-       $('#epno').val(b[0].epno);
+        //-       $('#eid').val(b[0].eid);
+        //-     });
+        //-     $('.dontdisplay').show();
+        //-   });
+      });
+    //- script.
+      window.onload = function() {
+      document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+      }, false);
+      document.addEventListener("keydown", function(e) {
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+      alert('not allowed');
+      disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+      alert('not allowed');
+      disabledEvent(e);
+      }
+      }, false);
+      function disabledEvent(e){
+      if (e.stopPropagation){
+      e.stopPropagation();
+      } else if (window.event){
+      window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+      }
+      };
+    
+    //- script.
+      document.onkeydown = function(e) {
+          if (e.ctrlKey && 
+              (e.keyCode === 67 || 
+               e.keyCode === 86 || 
+               e.keyCode === 73 || 
+               e.keyCode === 85 || 
+               e.keyCode === 117)) {
+              alert('not allowed');
+              return false;
+          } else {
+              return true;
+          }
+      };
+    

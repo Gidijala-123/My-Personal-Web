@@ -1,0 +1,603 @@
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width")
+    title GBR's Covid-19 Live status
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css")
+    link(href="https://kit-pro.fontawesome.com/releases/v5.13.0/css/pro.min.css" rel="stylesheet")
+  
+  body
+    .preloader
+      .preloader__content
+        .preloader__loader
+        .preloader__txt Loading ...
+   
+    .extended-content-container 
+      .statistics
+        .global
+          
+          .textANI.three
+            .img
+            span C
+            span o
+            span v
+            span i
+            span d
+            span -
+            span 1
+            span 9
+            span L
+            span i
+            span v
+            span e
+          
+          .global__cases
+            span
+            h1(style="text-align:center;")
+            h3.covtxt Total Cases
+          .global__deaths
+            span
+            h1(style="text-align:center;")
+            h3.covtxt Total Deaths
+          .global__recovered
+            span
+            h1(style="text-align:center;")
+            h3.covtxt Total Recovered
+          div.covdiv
+            input#search.cip(type="text" name="country" placeholder="Search Countries")
+            br
+            select#select.custom-select.cslt(onchange="changeOrder()")
+              option(selected="" disabled="") Sort By
+              option(value="cases") Total Cases
+              option(value="deaths") Total Deaths
+              option(value="recovered") Total Recoveries
+        table.table
+          thead
+            tr
+              th Country
+              th Cases
+              th Deaths
+              th Recovered
+          tbody
+
+  style.
+    body{
+    background-color:lightyellow;
+    }
+    body::-webkit-scrollbar{
+    display:none;
+    }
+    
+    .preloader {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #181818;
+      z-index: 999;
+      visibility: visible;
+      overflow: hidden;
+      pointer-events: none;
+      user-select: none;
+      cursor: default;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-user-drag: none;
+      }
+      .preloader--hidden {
+      animation-name: hide;
+      animation-duration: 0.5s;
+      animation-timing-function: linear;
+      animation-direction: normal;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      }
+      .preloader__content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      background-color: yellow;     /*when clicked on covid status a loading animation with bg clr yellow will be appeared*/
+      }
+      .preloader__loader {
+      margin: 0 auto;
+      width: 70px;
+      height: 70px;
+      border: 8px solid #f0f0f0;
+      border-top: 8px solid #696969;
+      border-radius: 50%;
+      animation: spin 4s linear infinite;
+      }
+
+      /*Content after loading animation */
+      @keyframes spin {
+      100% {
+      transform: rotate(360deg);
+      }
+      }
+      @keyframes hide {
+      0% {
+      opacity: 1;
+      visibility: visible;
+      }
+      99% {
+      opacity: 0;
+      visibility: visible;
+      }
+      100% {
+      opacity: 0;
+      visibility: hidden;
+      }
+      }
+      .preloader__txt {
+      padding: 10px;
+      color: #f0f0f0;
+      }
+      .extended-content-container {
+      margin:20px;
+      padding-left: 0px;
+      padding-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      display: block;
+      font-family: Tw Cen MT;
+      }
+      .extended-content-container .statistics {
+      margin:0px 0px 5px 0px;
+      position: relative;
+      }
+      .extended-content-container .statistics .global {
+      position: relative;
+      background-color: #4C1441;
+      height:200px;
+      border-radius: 7px;
+      margin-bottom: 5px;
+      }
+      .extended-content-container .statistics .global__cases {
+      margin: 83px 15px 5px 15px;
+      font-size:25px;
+      display: inline-block;
+      color: #07E5E5;
+      font-weight:bold;
+      }
+      @media screen and (max-width: 576px) {
+      .extended-content-container .statistics .global__cases {
+      display: block;
+      }
+      }
+      .extended-content-container .statistics .global__deaths {
+      margin: 83px 15px 5px 15px;
+      font-size:25px;
+      display: inline-block;
+      color: #FC0E04;
+      font-weight:bold;
+      }
+      @media screen and (max-width: 576px) {
+      .extended-content-container .statistics .global__deaths {
+      display: block;
+      }
+      }
+      .extended-content-container .statistics .global__recovered {
+      margin: 83px 15px 5px 15px;
+      font-size:25px;
+      display: inline-block;
+      color: #25F604;
+      font-weight:bold;
+      }
+      @media screen and (max-width: 576px) {
+      .extended-content-container .statistics .global__recovered {
+      display: block;
+      }
+      }
+      .cip{
+      width:400px;
+      height:40px;
+      margin-top:10px;
+      border:2.2px solid #4C1441;
+      border-radius: 7px;
+      outline: none;
+      }
+      .cslt{
+      width:400px;
+      height:40px;
+      margin-top:10px;
+      border:2.2px solid #4C1441;
+      border-radius: 7px;
+      }
+      .covdiv{
+      margin: 30px 15px 5px 15px;      
+      float:right;
+      }
+      .covtxt{
+      color: white;
+      font-weight: bold;
+      text-shadow: 0 0 3px black;
+      font-family: Tw Cen MT;
+      }
+      select:focus{
+      outline: none;
+      }
+      .extended-content-container .statistics .table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 320px;
+      border:3px solid #4C1441;
+      border-radius: 7px;
+      border-collapse: separate !important;                     /*to seperate each cell with a space bw them*/
+      }
+      @media screen and (max-width: 576px) {
+      .extended-content-container .statistics .table thead,
+      .extended-content-container .statistics .table tbody,
+      .extended-content-container .statistics .table th,
+      .extended-content-container .statistics .table td,
+      .extended-content-container .statistics .table tr {
+      display: block;
+      }
+      }
+      .extended-content-container .statistics .table>thead {
+      background-color: #4C1441;
+      border-radius: 7px;
+      color:white;
+      text-shadow: 0 0 10px black;
+      }
+      @media screen and (max-width: 576px) {
+      .extended-content-container .statistics .table>thead {
+      display: none;
+      }
+      }
+      .extended-content-container .statistics .table>thead>tr>th {
+      text-align: left;
+      font-size: 28px;
+      font-weight:bold;
+      }
+      .extended-content-container .statistics .table>thead>tr>th:not(:first-child) {
+      text-align: center;
+      }
+      @media screen and (max-width: 576px) {
+      .extended-content-container .statistics .table td:nth-of-type(1)::before {
+      content: "Country";
+      }
+      .extended-content-container .statistics .table td:nth-of-type(2)::before {
+      content: "Cases";
+      }
+      .extended-content-container .statistics .table td:nth-of-type(3)::before {
+      content: "Deaths";
+      }
+      .extended-content-container .statistics .table td:nth-of-type(4)::before {
+      content: "Recovered";
+      }
+      }
+      .extended-content-container .statistics .table td {
+      border: 1.65px solid #4C1441;
+      background-color: #F6CDE4;
+      padding: 9px 15px;
+      white-space: nowrap;
+      color:black;
+      text-shadow: 0 0 1.5px black;
+      }
+      .extended-content-container .statistics .table>tbody>tr>td {
+      font-size: 18px;
+      }
+      .extended-content-container .statistics .table>tbody>tr>td img {
+      width: 24px;
+      vertical-align: baseline;
+      margin-right: 10px;
+      }
+      @media screen and (max-width: 576px) {
+      .extended-content-container .statistics .table>tbody>tr>td {
+      position: relative;
+      text-align: center;
+      }
+      .extended-content-container .statistics .table>tbody>tr>td:first-child {
+      background-color: #181818;
+      padding-left: 100px;
+      white-space: normal;
+      }
+      .extended-content-container .statistics .table>tbody>tr>td::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 9px 15px;
+      white-space: nowrap;
+      }
+      }
+      .extended-content-container .statistics .table>tbody>tr>td:not(:first-child) {
+      text-align: center;
+      }
+      .extended-content-container .statistics .hidden {
+      display: none !important;
+      }
+
+      @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+      .textANI {
+      text-align: center;
+      font-weight: bold;
+      text-shadow: 0px 0px 10px black;
+      font-size: 50px;
+      margin: 0px;
+      padding-top:10px;
+      }
+      .img{
+      background-image:url("images/mypics/a(0).jpg");
+      width:40px;
+      height:40px;
+      background-size:cover;
+      border-radius:50%;
+      float:left;
+      margin:6px 0px 0px 15px;
+      opacity:0.2;
+      }
+      .img:hover{
+      opacity:1;
+      }
+      .textANI span {
+        display: inline-block;
+      }
+      .three span {
+        opacity: 0;
+        transform: translate(-300px, 0) scale(0);
+        animation: sideSlide .5s forwards;
+      }
+      @keyframes sideSlide {
+        60% {
+          transform: translate(20px, 0) scale(1);
+          color: white;
+        }
+       
+        80% {
+          transform: translate(20px, 0) scale(1);
+          color: white;
+        }
+       
+        99% {
+          transform: translate(0) scale(1.5);
+          color: #FD0505;
+        }
+       
+        100% {
+          transform: translate(0) scale(1);
+          opacity: 1;
+          color: white;
+        }
+     }
+
+      .textANI span:nth-of-type(1) {
+        animation-delay: .1s;
+      }
+      .textANI span:nth-of-type(2) {
+        animation-delay: .3s;
+      }
+      .textANI span:nth-of-type(3) {
+        animation-delay: .5s;
+      }
+      .textANI span:nth-of-type(4) {
+        animation-delay: .7s;
+      }
+      .textANI span:nth-of-type(5) {
+        animation-delay: .9s;
+      }
+      .textANI span:nth-of-type(6) {
+        animation-delay: .11s;
+      }
+      .textANI span:nth-of-type(7) {
+        animation-delay: .13s;
+      }
+      .textANI span:nth-of-type(8) {
+        animation-delay: .15s;
+      }
+      .textANI span:nth-of-type(9) {
+        animation-delay: .17s;
+      }
+      .textANI span:nth-of-type(10) {
+        animation-delay: .19s;
+      }
+      .textANI span:nth-of-type(11) {
+        animation-delay: .21s;
+      }
+      .textANI span:nth-of-type(12) {
+        animation-delay: .23s;
+      }
+
+  script(src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js")
+  script(src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js")
+  script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/iamdustan-smoothscroll/0.4.0/smoothscroll.min.js")
+  script.
+    // Add a request interceptor
+    axios.interceptors.request.use(
+    function(config) {
+    //console.log("request sent", new Date());
+    return config;
+    },
+    function(error) {
+    preloader.classList.add("preloader--hidden");
+    alert(error);
+    return Promise.reject(error);
+    }
+    );
+    var preloader = document.querySelector(".preloader");
+    // Add a response interceptor
+    axios.interceptors.response.use(
+    function(response) {
+    preloader.classList.add("preloader--hidden");
+    return response;
+    },
+    function(error) {
+    preloader.classList.add("preloader--hidden");
+    alert(error);
+    return Promise.reject(error);
+    }
+    );
+    function getGlobalData() {
+    return axios.get("https://corona.lmao.ninja/v2/all");         /*geeting covid live update from website*/
+    }
+    function getCountriesData() {
+    return axios.get("https://corona.lmao.ninja/v2/countries");
+    }
+    axios
+    .all([getGlobalData(), getCountriesData()])
+    .then(
+    axios.spread(function(global, countries) {
+    //global
+    console.log("%c全球 Global", "color: #fb5e53");
+    console.log("確診 Cases", global.data.cases);
+    console.log("死亡 Deaths", global.data.deaths);
+    console.log("康復 Recovered", global.data.recovered);
+    var totalCases = global.data.cases.toLocaleString();
+    var totalDeaths = global.data.deaths.toLocaleString();
+    var totalRecovered = global.data.recovered.toLocaleString();
+    document.getElementsByClassName(
+    "global__cases"
+    )[0].childNodes[1].innerHTML = totalCases;
+    document.getElementsByClassName(
+    "global__recovered"
+    )[0].childNodes[1].innerHTML = totalRecovered;
+    document.getElementsByClassName(
+    "global__deaths"
+    )[0].childNodes[1].innerHTML = totalDeaths;
+    //countries
+    const tbody = document.getElementsByTagName("tbody")[0];
+    var countries = countries.data;
+    countries.forEach(function(element, index, array) {
+    const tr = document.createElement("tr");
+    // 國旗 flag
+    const img = document.createElement("img");
+    img.src = element.countryInfo.flag;
+    img.alt = element.countryInfo.iso2;
+    img.setAttribute("title", element.countryInfo.iso2);
+    var values = [
+    element.country,
+    element.cases,
+    element.deaths,
+    element.recovered
+    ];
+    values.forEach(function(element, index, array) {
+    const td = document.createElement("td");
+    element =
+    validation.isNumber(element) === "NaN" ?
+    element :
+    element.toLocaleString();
+    if (!index) {
+    let text = document.createTextNode(element);
+    td.appendChild(img);
+    td.appendChild(text);
+    } else {
+    td.innerHTML = element;
+    }
+    tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+    });
+    })
+    )
+    .catch(function(error) {
+    console.log(error);
+    });
+    var validation = {
+    isNumber: function(str) {
+    //  /^\\d+$/g is equal to /^[0-9]+$/g;
+    var patt = /^\\d+$/g;
+    return patt.test(str);
+    }
+    };
+    //searching countries
+    var search = document.getElementById("search");
+    search.addEventListener("keyup", function() {
+    var value = this.value.toLowerCase();
+    console.log("value", value);
+    const rows = document.querySelectorAll("tbody tr");
+    const rowsArray = Array.prototype.slice.call(rows);
+    rowsArray.forEach(function(element, index, array) {
+    var tdCountry = element.childNodes[0].innerHTML.toLowerCase();
+    if (tdCountry.indexOf(value) > -1) {
+    //console.log(tdCountry, tdCountry.indexOf(value));
+    element.classList.remove("hidden");
+    } else {
+    element.classList.add("hidden");
+    }
+    });
+    });
+    //sorting
+    function changeOrder() {
+    const value = document.getElementById("select").value;
+    const index = document.getElementById("select").selectedIndex;
+    //console.log(value, index);
+    const rows = document.querySelectorAll("tbody tr");
+    const rowsArray = Array.prototype.slice.call(rows);
+    rowsArray
+    .sort(function(A, B) {
+    var num1 = A.childNodes[index].innerHTML;
+    num1 = num1.replace(",", "");
+    var num2 = B.childNodes[index].innerHTML;
+    num2 = num2.replace(",", "");
+    return num2 - num1;
+    })
+    .forEach(function(tr) {
+    tr.parentElement.appendChild(tr);
+    });
+    //console.log(rowsArray);
+    }
+    document.querySelector(".arrow__up").addEventListener("click", function() {
+    window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+    });
+    });
+    document.querySelector(".arrow__down").addEventListener("click", function() {
+    window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: "smooth"
+    });
+    });
+
+  script.
+    window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    // "J" key
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+    alert('not allowed');
+    disabledEvent(e);
+    }
+    // "F12" key
+    if (event.keyCode == 123) {
+    alert('not allowed');
+    disabledEvent(e);
+    }
+    }, false);
+    function disabledEvent(e){
+    if (e.stopPropagation){
+    e.stopPropagation();
+    } else if (window.event){
+    window.event.cancelBubble = true;
+    }
+    e.preventDefault();
+    return false;
+    }
+    };
+    
+  script.
+    document.onkeydown = function(e) {
+        if (e.ctrlKey && 
+            (e.keyCode === 67 || 
+             e.keyCode === 86 || 
+             e.keyCode === 73 || 
+             e.keyCode === 85 || 
+             e.keyCode === 117)) {
+            alert('not allowed');
+            return false;
+        } else {
+            return true;
+        }
+    };
+

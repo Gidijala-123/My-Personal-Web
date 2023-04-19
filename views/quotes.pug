@@ -1,0 +1,1156 @@
+html
+  head
+    meta(charset="UTF-8")
+    title GBR's - Telugu quotes 
+  style.
+    html,body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    }
+    *,*:after,*:before {
+    box-sizing: border-box;
+    }
+    /*  PLACEHOLDER
+    ----------------------*/
+    ::-webkit-input-placeholder {
+    color: #FFF;
+    }
+    :-moz-placeholder {
+    color: #FFF;
+    }
+    ::-moz-placeholder {
+    color: #FFF;
+    }
+    :-ms-input-placeholder {
+    color: #FFF;
+    }
+    /*  SCROLLBAR
+    -------------------*/
+    ::-webkit-scrollbar {
+    width: 0.2em;
+    background: #e74c3c;
+    }
+    ::-webkit-scrollbar-track {
+    }
+    ::-webkit-scrollbar-thumb {
+    background: #fff;
+    }
+    ::-webkit-scrollbar-thumb:window-inactive {
+    background: #fff;
+    }
+    /*  SELECTION
+    -------------------*/
+    ::-moz-selection {
+    background: #999;
+    color: #fff;
+    }
+    ::selection {
+    background: #999;
+    color: #fff;
+    }
+    ::-moz-selection {
+    background: #999;
+    color: #fff;
+    }
+    /* === Links Styles === */
+    a {
+    text-decoration: underline;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    }
+    a:hover {
+    text-decoration: none;
+    }
+    a:focus {
+    outline: 0;
+    outline: 0 auto -webkit-focus-ring-color;
+    outline-offset: 0;
+    }
+    /*  Layout
+    =======================*/
+    body {
+    background-image: url("https://subtlepatterns.com/patterns/sativa.png");
+    overflow-x: hidden;
+    font-size: 13px;
+    font-family: 'Metrophobic', sans-serif;
+    font-weight: 400;
+    }
+    .wrapper {
+    margin: 5% auto;
+    margin-top:0px;
+    margin-left:35px;
+    display: block;
+    width: 96%;
+    height: 850px;
+    padding: 0;
+    }
+    .wrapper:before {
+    content: "";
+    display: table;
+    }
+    .wrapper_inner {
+    
+    margin: 0;
+    }
+    .gallery {
+    }
+    .gallery_item {
+    float: left;
+    width: 24.59%;
+    display: inline-block;
+    margin: 0 auto;
+    margin-right: 0.25em;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    background: #000;
+    border: 1px solid #F3F0F0;
+    position:relative;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072);
+    border-radius: 5px;
+    }
+    .gallery_item_preview {
+    background: black;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    }
+    .gallery_item_preview a {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    color: #333;
+    text-decoration: none;
+    overflow: hidden;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    }
+    .gallery_item_preview a:hover {
+    color: #777;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    }
+    .gallery_item_preview a svg.gallery_top{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100px;
+    stroke:none;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border-radius:0px 4px 0px 0px;
+    }
+    .gallery_item_preview a:hover  svg.gallery_top{
+    top:-10em;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    }
+    .gallery_hide_top{
+    top:-10em !important;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    }
+    .gallery_item_preview a:before {
+    content: "Click to Download";
+    position: absolute;
+    top: 1em;
+    left: -30em;
+    background-color: rgba(255, 255, 255, 0.99);
+    color: #F57171;
+    font-weight:bold;
+    padding: 0.56em 0.8em;
+    border-radius: 9px;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    }
+    .gallery_item_preview a:hover:before {
+    left: 1em;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    }
+    .gallery_item_preview a h3 {
+    font-family: 'Leckerli One', cursive;
+    }
+    .gallery_item_preview a img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    }
+    .gallery_item_full {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #000;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 100;
+    overflow: hidden;
+    }
+    .gallery_item_full img {
+    display: block;
+    width: 100%;
+    }
+    .box {
+    margin: auto;
+    background: #FFF;
+    padding: 2em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    width: 50%;
+    text-align: left;
+    border: 1px solid #DADADA;
+    }
+    .box h3 {
+    font-family: 'Leckerli One', cursive;
+    color: #F88484;
+    }
+    .cl {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    color: #777;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    }
+    .cl:hover {
+    color: #F88484;
+    }
+    /*  Responsive video
+    =============================*/
+    .video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    }
+    .video iframe,
+    .video object,
+    .video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+   
+    .gallery_item_list {
+    float: none !important;
+    display: block !important;
+    width: 50%;
+    margin: auto;
+    margin-top: 0.5em;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    }
+    .gallery_line {
+    width: 130px !important;
+    height: 100px !important;
+    display: inline-block !important;
+    float: left !important;
+    margin-right: 1em !important;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    }
+    /*  Simple animation
+    =======================*/
+    .efIn {
+    -webkit-animation: fx_in 0.65s 1 ease-in-out;
+    animation: fx_in 0.65s 1 ease-in-out;
+    }
+    .efOut {
+    -webkit-animation: fx_out 0.7s 1 ease-in-out;
+    animation: fx_out 0.7s 1 ease-in-out;
+    }
+    /*  Keyframes
+    ==============*/
+    @-webkit-keyframes fx_in {
+    from {
+    width: 0;
+    height: 0;
+    -webkit-border-radius: 100%;
+    opacity: 0;
+    }
+    50% {
+    -webkit-box-shadow: inset 0 0 0 0  #fff;
+    }
+    to {
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 0;
+    opacity: 1;
+    }
+    }
+    @-webkit-keyframes fx_out {
+    from {
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 0;
+    -webkit-box-shadow: inset 0 0 0 0 #fff;
+    opacity: 1;
+    }
+    50% {
+    -webkit-box-shadow: inset 0 0 0 80em  #fff;
+    }
+    to {
+    width: 0;
+    height: 0;
+    -webkit-border-radius: 100%;
+    opacity: 0;
+    }
+    }
+    /* moz */
+    /* o */
+    /* ms */
+    @keyframes fx_in {
+    from {
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    opacity: 0;
+    }
+    50% {
+    box-shadow: inset 0 0 0 0  #fff;
+    }
+    to {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    opacity: 1;
+    }
+    }
+    @keyframes fx_out {
+    from {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 0 #fff;
+    opacity: 1;
+    }
+    50% {
+    box-shadow: inset 0 0 0 80em  #fff;
+    }
+    to {
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    opacity: 0;
+    }
+    }
+    /* Large desktop */
+    @media (min-width: 980px) {
+    .gallery_item_list {
+    width: 50% !important;
+    }
+    .gallery_item {
+    width: 24.45%;
+    }
+    .gallery_item_preview a img {
+    height: 180px;
+    }
+    .box {
+    width: 60%;
+    max-height: 550px;
+    }
+    }
+    /* Portrait tablet to landscape and desktop */
+    @media (min-width: 768px) and (max-width: 979px) {
+    .gallery_item_list {
+    width: 60% !important;
+    }
+    .gallery_item {
+    width: 32.83%;
+    }
+    .gallery_item_preview a img {
+    height: 180px;
+    }
+    .box {
+    width: 70%;
+    max-height: 550px;
+    }
+    }
+    /* Landscape phone to portrait tablet */
+    @media (max-width: 767px) {
+    .gallery_item_list {
+    width: 70% !important;
+    }
+    .gallery_item {
+    width: 49.3%;
+    }
+    .gallery_item_preview a img {
+    height: 180px;
+    }
+    .box {
+    margin: auto;
+    padding: 4em 1em 1em 1em;
+    width: 80%;
+    height: 500px;
+    }
+    .cl {
+    top: 0;
+    right: 0.5em;
+    }
+    }
+    /* Landscape phones and down */
+    @media (max-width: 480px) {
+    .gallery_item_list {
+    width: 100% !important;
+    }
+    .gallery_item {
+    width: 100%;
+    }
+    .gallery_item_preview a img {
+    height: 200px;
+    }
+    .box {
+    background: #F8F8F8;
+    padding: 4em 1em 1em 1em;
+    width: 100%;
+    height: auto;
+    }
+    .cl {
+    top: 0;
+    right: 0.5em;
+    }
+    .gallery_item_list {
+    width: 100% !important;
+    }
+    }
+    h1{
+    color:black;
+    font-size:35px;
+    font-weight:bold;
+    text-align:center;
+    padding-top:15px;
+    }
+    .gallery_item .gallery_item_preview a span {
+    color:white;
+    }
+  body
+    h1 Telugu_Quotes
+    .wrapper
+      .wrapper_inner
+        section.gallery
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=163BsVePN0Aqq46IPTi3S3lZ9hz6utz82" data-js="1")
+                svg.gallery_top(fill="#f55" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (1).jpg" alt="")
+                span
+                  h3 Quote - 1
+                  p Hover on image for download
+          
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=152-ZZJBdxhr4oxWjWEFSZHxHnWtP7_rq" data-js="2")
+                svg.gallery_top(fill="#5690F7" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (1).png" alt="")
+                span
+                  h3 Quote - 2
+                  p Hover on image for download
+           
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=118WRg-IRxKiyj5clbkSB1vmkcfKa7M1O" data-js="3")
+                svg.gallery_top(fill="#ECD711" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (2).jpg" alt="")
+                span
+                  h3 Quote - 3
+                  p Hover on image for download
+          
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=17nCYXsKu1E1H1omEDoOyArZzEM2qfSL6" data-js="4")
+                svg.gallery_top(fill="#30BFBF" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (2).png" alt="")
+                span
+                  h3 Quote - 4
+                  p Hover on image for download
+           
+           
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1s0PFhEW8xKSFTjxhrhBazXdcldM6Y1D8" data-js="5")
+                svg.gallery_top(fill="#E06D80" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (3).jpg" alt="")
+                span
+                  h3 Quote - 5
+                  p Hover on image for download
+           
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1H9Oi4NbYm6Y_Bk4KP13MnUmEIW3aVcxQ" data-js="6")
+                svg.gallery_top(fill="#3F7D5A" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (3).png" alt="")
+                span
+                  h3 Quote - 6
+                  p Hover on image for download
+    
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=12nRb8uEEPJzU-PqaaFcsXgTKyBFTLkuF" data-js="7")
+                svg.gallery_top(fill="#FFAE41" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (4).jpg" alt="")
+                span
+                  h3 Quote - 7
+                  p Hover on image for download
+    
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1L_VAe7wHxkZ7Pnz3LiafbRTYIyYqDj_U" data-js="8")
+                svg.gallery_top(fill="#FBC69A" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (4).png" alt="")
+                span
+                  h3 Quote - 8
+                  p Hover on image for download
+    
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1fbEUnu7goG39zAi4Gf2FvRvQSlc4TaId" data-js="9")
+                svg.gallery_top(fill="#51BB5B" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 175.81699,28.832771 176.47059,0.72819569 z")
+                img(src="images/quotes/a (5).jpg" alt="")
+                span
+                  h3 Quote - 9
+                  p Hover on image for download
+    
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=11NwGox_ejYRVeKk2nJHzcaBHASNe8lw-" data-js="10")
+                svg.gallery_top(fill="#ECD711" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (5).png" alt="")
+                span
+                  h3 Quote - 10
+                  p Hover on image for download
+    
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1WWtK5hzt5cWGXLi8dBORPQKp-DAUj80Q" data-js="11")
+                svg.gallery_top(fill="#30BFBF" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (6).jpg" alt="")
+                span
+                  h3 Quote - 11
+                  p Hover on image for download
+    
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1YR7R2ZqJVhc4l27DSDCwWjhAWUYyDOoo" data-js="12")
+                svg.gallery_top(fill="#FFAE41" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (6).png" alt="")
+                span
+                  h3 Quote - 12
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1zlwhjNNBeODsulGmFjNN59HqS8r6hXCW" data-js="12")
+                svg.gallery_top(fill="#f55" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (7).jpg" alt="")
+                span
+                  h3 Quote - 13
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=16lqyYsdQrA7hBV28otxwEsnZEvyarf0N" data-js="12")
+                svg.gallery_top(fill="#FBFCDC" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (7).png" alt="")
+                span
+                  h3 Quote - 14
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1oJ90st1gVpjr1LHO7UBL5dYTjpMa1iqF" data-js="12")
+                svg.gallery_top(fill="#51BB5B" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (8).jpg" alt="")
+                span
+                  h3 Quote - 15
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1bll1d3zrVF5yqNyJWz3DvHdkO0AKtdKI" data-js="12")
+                svg.gallery_top(fill="#FBC69A" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (8).png" alt="")
+                span
+                  h3 Quote - 16
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1gNpx1c8Y4f3AVd6W2DlREO_NibfcJkcI" data-js="12")
+                svg.gallery_top(fill="#f55" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (9).jpg" alt="")
+                span
+                  h3 Quote - 17
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1sLEnlR9ivisyVpgtT2iDKYUSvVN2QSX_" data-js="12")
+                svg.gallery_top(fill="#ECD711" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (9).png" alt="")
+                span
+                  h3 Quote - 18
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1cu0sB28cSGlSen8nQVxbRjGmD6clYE93" data-js="12")
+                svg.gallery_top(fill="#30BFBF" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (10).jpg" alt="")
+                span
+                  h3 Quote - 19
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=192e4rD--28hinSuRbPWzmdl_WtyD4MFx" data-js="12")
+                svg.gallery_top(fill="#FBC69A" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (10).png" alt="")
+                span
+                  h3 Quote - 20
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=19-O_R7d6iji5y4PrghLYTaMIxxXY-kiR" data-js="12")
+                svg.gallery_top(fill="#3F7D5A" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (11).jpg" alt="")
+                span
+                  h3 Quote - 21
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1RCgxhd6PX2s1y4eeJyl-8N28XChdBotF" data-js="12")
+                svg.gallery_top(fill="#f55" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (11).png" alt="")
+                span
+                  h3 Quote - 22
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1uNtPxODYnnBmEPagqo6OBPudo56GWNo9" data-js="12")
+                svg.gallery_top(fill="#FFAE41" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (12).jpg" alt="")
+                span
+                  h3 Quote - 23
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=15eWHtp1oybGxMkXvds-3_Jjl_1BSRG57" data-js="12")
+                svg.gallery_top(fill="#FBC69A" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (12).png" alt="")
+                span
+                  h3 Quote - 24
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1jEmNoCo4d7FGtwqq7piaTvCLdO_meriT" data-js="12")
+                svg.gallery_top(fill="#f55" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (13).jpg" alt="")
+                span
+                  h3 Quote - 25
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=13dxoKvpHUf4dLUaMkEu97eHck1ZQvMqd" data-js="12")
+                svg.gallery_top(fill="#FFAE41" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (14).jpg" alt="")
+                span
+                  h3 Quote - 26
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1Uhhzm5aw0zNY41gJJ3OG4FSmWtFhRRiH" data-js="12")
+                svg.gallery_top(fill="#51BB5B" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (15).jpg" alt="")
+                span
+                  h3 Quote - 27
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1QGERPhHksUy4dKS7Vu7F1kyfsr72kYeA" data-js="12")
+                svg.gallery_top(fill="#f55" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (16).jpg" alt="")
+                span
+                  h3 Quote - 28
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=15l7AFpppvE68uSDNn1Fr8WEKztzoGlp8" data-js="12")
+                svg.gallery_top(fill="#FFAE41" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (17).jpg" alt="")
+                span
+                  h3 Quote - 29
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1XWKWvKHj2FCa8UoQPKFOtgiZJ7KL4zDy" data-js="12")
+                svg.gallery_top(fill="#30BFBF" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (18).jpg" alt="")
+                span
+                  h3 Quote - 30
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1rVAwZ7C5A-5LC6pRSS4k3Ns4iURnSz_Y" data-js="12")
+                svg.gallery_top(fill="#f55" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (19).jpg" alt="")
+                span
+                  h3 Quote - 31
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1-w2_HQh8W79F-IHcqonYJ3Ldzfwoup4W" data-js="12")
+                svg.gallery_top(fill="#51BB5B" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (20).jpg" alt="")
+                span
+                  h3 Quote - 32
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1tWSyJ0f7gkr99Mi1SeQ6TAvteZo9lzwm" data-js="12")
+                svg.gallery_top(fill="#FBFCDC" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (21).jpg" alt="")
+                span
+                  h3 Quote - 33
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1TwWDTxjv14wleyGQz6Ol6P6nV0_zlheg" data-js="12")
+                svg.gallery_top(fill="#3F7D5A" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (22).jpg" alt="")
+                span
+                  h3 Quote - 34
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1utjJ7tw5_gTEYw6-OCk7AwAoq914pNuB" data-js="12")
+                svg.gallery_top(fill="#f55" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (23).jpg" alt="")
+                span
+                  h3 Quote - 35
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1McCAlUkNFEKqVx9kXapeFKGhVtzDlo0m" data-js="12")
+                svg.gallery_top(fill="#FFAE41" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (24).jpg" alt="")
+                span
+                  h3 Quote - 36
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=" data-js="12")
+                svg.gallery_top(fill="#FBFCDC" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (25).jpg" alt="")
+                span
+                  h3 Quote - 37
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1DM3snUhdfsv6-khWjRlDt4uSenOd_pMB" data-js="12")
+                svg.gallery_top(fill="#E06D80" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (26).jpg" alt="")
+                span
+                  h3 Quote - 38
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1E4daOPWWY4-_Z5qw8wegWoXM58DkInWF" data-js="12")
+                svg.gallery_top(fill="#51BB5B" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (27).jpg" alt="")
+                span
+                  h3 Quote - 39
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=11GIOAW2l-Z1omsgrkflwJ1aFbYnedWxK" data-js="12")
+                svg.gallery_top(fill="#ECD711" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (28).jpg" alt="")
+                span
+                  h3 Quote - 40
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1B3HL8TxlbCAq3gFIojIA9oyCrpLXjSs-" data-js="12")
+                svg.gallery_top(fill="#f55" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (29).jpg" alt="")
+                span
+                  h3 Quote - 41
+                  p Hover on image for download
+
+          .gallery_item.gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1cb_vrxLW9ZgBrVxnI7Wus5Chor1KXiOi" data-js="12")
+                svg.gallery_top(fill="#FFAE41" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (30).jpg" alt="")
+                span
+                  h3 Quote - 42
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1wy58bbVpZ9fVDk9_pVDWE277cGk35515" data-js="12")
+                svg.gallery_top(fill="#FBFCDC" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (31).jpg" alt="")
+                span
+                  h3 Quote - 43
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1faTi5CKvhsOFpPXSqtVPJeSsfubWzSij" data-js="12")
+                svg.gallery_top(fill="#FBFCDC" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (32).jpg" alt="")
+                span
+                  h3 Quote - 44
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1C6AQCpPQfv3LZnK7DC7i9VRdoHjbZTL9" data-js="12")
+                svg.gallery_top(fill="#3F7D5A" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (33).jpg" alt="")
+                span
+                  h3 Quote - 45
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1tHd-QHY_IntMpz_oSC58-13Xr-EiOiMY" data-js="12")
+                svg.gallery_top(fill="#f55" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (34).jpg" alt="")
+                span
+                  h3 Quote - 46
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1xp8jhH2DfdbLqxchQaEwuaP9r8cdls-4" data-js="12")
+                svg.gallery_top(fill="#ECD711" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (35).jpg" alt="")
+                span
+                  h3 Quote - 47
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1KPobtGxNcxhD033qCYYWZfnO2mc3dNg_" data-js="12")
+                svg.gallery_top(fill="#30BFBF" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (36).jpg" alt="")
+                span
+                  h3 Quote - 48
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1ZzltS8OHHuYBxH0n6OERhrLA99LK-eB5" data-js="12")
+                svg.gallery_top(fill="#f55" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (37).jpg" alt="")
+                span
+                  h3 Quote - 49
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1a5oE4b7r7xofQddNhog9UGN7Wfz87opG" data-js="12")
+                svg.gallery_top(fill="#51BB5B" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (38).jpg" alt="")
+                span
+                  h3 Quote - 50
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1G_a7AwBrBPi9-pGZgOItjmhJTRfGiZpB" data-js="12")
+                svg.gallery_top(fill="#FFAE41" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (39).jpg" alt="")
+                span
+                  h3 Quote - 51
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=13Y0xHK0eR4LP3-HELxODCpouJyNfp93V" data-js="12")
+                svg.gallery_top(fill="#f55" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (40).jpg" alt="")
+                span
+                  h3 Quote - 52
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1Q2BibWrOW-gp_jYYKCmP3AfS_dBKbAmn" data-js="12")
+                svg.gallery_top(fill="#FFAE41" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (41).jpg" alt="")
+                span
+                  h3 Quote - 53
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1ASxMaf9DluvDYwiNEySynkY-Ln7VPFM5" data-js="12")
+                svg.gallery_top(fill="#3F7D5A" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (42).jpg" alt="")
+                span
+                  h3 Quote - 54
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1UmxqihCbGsQUFUrhe1su7PUbtcJSkd9C" data-js="12")
+                svg.gallery_top(fill="#FBC69A" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (43).jpg" alt="")
+                span
+                  h3 Quote - 55
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1D2fx2SOa4YSF2T1Y2ZoBRL1We3sn3oHW" data-js="12")
+                svg.gallery_top(fill="#f55" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (44).jpg" alt="")
+                span
+                  h3 Quote - 56
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=14h904VFzZmoGiYBKgB8uR0-7OB11qSro" data-js="12")
+                svg.gallery_top(fill="#FFAE41" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (45).jpg" alt="")
+                span
+                  h3 Quote - 57
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1MNMn-D8v2zx5Qis2mJcGP7bNY21Id6pl" data-js="12")
+                svg.gallery_top(fill="#FBFCDC" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (46).jpg" alt="")
+                span
+                  h3 Quote - 58
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1Ya49HLmqZ09lTEgxYNn8VZSEV99-cw_r" data-js="12")
+                svg.gallery_top(fill="#f55" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (47).jpg" alt="")
+                span
+                  h3 Quote - 59
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1ij8TtRFPa7VY38Wd41hr9ddVjBWrGrmC" data-js="12")
+                svg.gallery_top(fill="#3F7D5A" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (48).jpg" alt="")
+                span
+                  h3 Quote - 60
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1eq_M9_kLyuktNY8Am3Cd6e21DvE91Jw4" data-js="12")
+                svg.gallery_top(fill="#FBFCDC" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (49).jpg" alt="")
+                span
+                  h3 Quote - 61
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1meela7Vw-73cQyb7Xa8oBLx9Pjtb-8QR" data-js="12")
+                svg.gallery_top(fill="#FFAE41" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (50).jpg" alt="")
+                span
+                  h3 Quote - 62
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=14SUOZiYOfnx9dLoBMk2tcml9E--ojA7M" data-js="12")
+                svg.gallery_top(fill="#f55" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (51).jpg" alt="")
+                span
+                  h3 Quote - 63
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1PgdLeezYxYKBo2h3n4fLQV53TwZTM885" data-js="12")
+                svg.gallery_top(fill="#51BB5B" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (52).jpg" alt="")
+                span
+                  h3 Quote - 64
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1eCrGaqXk4zp2kvEDYF-1BPSkZCvur594" data-js="12")
+                svg.gallery_top(fill="#30BFBF" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (53).jpg" alt="")
+                span
+                  h3 Quote - 65
+                  p Hover on image for download
+
+          .gallery_item
+            span.gallery_item_preview
+              a(href="https://drive.google.com/uc?export=download&id=1ZrnM_w1QVH52XapKDG63DgNukevjOQWD" data-js="12")
+                svg.gallery_top(fill="#ECD711" viewbox="0 3 60 20")
+                  path(d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z")
+                img(src="images/quotes/a (54).jpg" alt="")
+                span
+                  h3 Quote - 66
+                  p Hover on image for download
+
+  script.
+    window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    // "J" key
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+    alert('not allowed');
+    disabledEvent(e);
+    }
+    // "F12" key
+    if (event.keyCode == 123) {
+    alert('not allowed');
+    disabledEvent(e);
+    }
+    }, false);
+    function disabledEvent(e){
+    if (e.stopPropagation){
+    e.stopPropagation();
+    } else if (window.event){
+    window.event.cancelBubble = true;
+    }
+    e.preventDefault();
+    return false;
+    }
+    };
+    
+  script.
+    document.onkeydown = function(e) {
+        if (e.ctrlKey && 
+            (e.keyCode === 67 || 
+             e.keyCode === 86 || 
+             e.keyCode === 73 || 
+             e.keyCode === 85 || 
+             e.keyCode === 117)) {
+            alert('not allowed');
+            return false;
+        } else {
+            return true;
+        }
+    };

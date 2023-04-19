@@ -1,0 +1,421 @@
+
+html
+  head
+    meta(charset="UTF-8")
+    title GBR's Gallery collection - wallpapers
+    link(href="https://fonts.googleapis.com/css?family=Oswald:700,300" rel="stylesheet" type="text/css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js")
+  style.
+    * {
+    box-sizing: border-box;
+    }
+    body {
+    background-image: url("https://subtlepatterns.com/patterns/sativa.png");
+    }
+    body::-webkit-scrollbar{
+    display:none;
+    }
+    .title {
+    text-align: center;
+    font-family: 'Oswald';
+    font-weight: 100;
+    font-size: 3.75rem;
+    letter-spacing: 5px;
+    background: linear-gradient(rgba(255, 0, 0, 0), #444, rgba(255, 0, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0;
+    } 
+    .case-study-gallery {
+    margin-top: 50px;
+    width: 90%;
+    margin: 50px auto;
+    z-index:1;
+    }
+    .case-study {
+    position: relative;
+    display: block;
+    width: 90%;
+    height: 250px;
+    margin: 0 auto 2rem;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 35px 25px rgba(0, 0, 0, 0.086),
+    0 20px 20px rgba(0, 0, 0, 0.12),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 35px 25px rgba(0, 0, 0, 0.086);
+    overflow: hidden;
+    transition: all .4s ease;
+    }
+    @media screen and (min-width: 37.5em) {
+    .case-study {
+    height: 300px;
+    }
+    }
+    @media screen and (min-width: 45em) {
+    .case-study {
+    display: inline-block;
+    width: 30%;
+    margin-left: 25px;
+    }
+    }
+    .case-study__img {
+    width: 90%;
+    display: block;
+    margin-top: 50%;
+    transform: translateY(50%);
+    margin: 0 auto;
+    }
+    .case-study__overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    }
+    .case-study__overlay:after {
+    content: '';
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    background-color: #202020;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: -10;
+    left: 0;
+    transition: all .3s ease;
+    }
+    .case-study__title {
+    position: relative;
+    top: -200px;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    font-size: 2.25rem;
+    font-family: 'Oswald';
+    font-weight: 100;
+    color: white;
+    text-align: center;
+    letter-spacing: 5px;
+    transition: all 0.3s cubic-bezier(0.3, 0, 0, 1.3);
+    }
+    .case-study__link {
+    position: relative;
+    display: block;
+    width: 60%;
+    top: 200px;
+    padding: 10px;
+    margin: 0 auto;
+    font-family: 'Oswald';
+    color: white;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 3px;
+    font-size: 1.25em;
+    transition: all 0.3s cubic-bezier(0.3, 0, 0, 1.3);
+    }
+    .case-study__link:hover {
+    background-color: white;
+    color: #202020;
+    }
+    .case-study:hover .case-study__title {
+    top: 0;
+    }
+    .case-study:hover .case-study__link {
+    top: 0;
+    }
+    .case-study:hover .case-study__overlay:after {
+    opacity: .75;
+    }
+    .study1 {
+    background-image: url("images/a(6).jpg");
+    background-position:center;
+    }
+    .study2 {
+    background-image: url("images/a(8).jpg");
+    background-position:center;
+    }
+    .study3 {
+    background-image: url("images/a(10).jpg");
+    background-position:center;
+    }
+    .study4 {
+    background-image: url("images/w(1).jpg");
+    background-position:center;
+    }
+    .study5 {
+    background-image: url("images/w(3).jpg");
+    background-position:center;
+    }
+    .study6 {
+    background-image: url("images/w(4).jpg");
+    background-position:center;
+    }
+    .study7 {
+    background-image: url("images/wall/a (1).jpeg");
+    background-position:center;
+    }
+    .study8 {
+    background-image: url("images/wall/a (1).jpg");
+    background-position:center;
+    }
+    .study9 {
+    background-image: url("images/wall/a (1).png");
+    background-position:center;
+    }
+    .study10 {
+    background-image: url("images/wall/a (2).jpeg");
+    background-position:center;
+    }
+    .study11 {
+    background-image: url("images/wall/a (2).jpg");
+    background-position:center;
+    }
+    .study12 {
+    background-image: url("images/wall/a (3).jpg");
+    background-position:center;
+    }
+    .study13 {
+    background-image: url("images/wall/a (4).jpg");
+    background-position:center;
+    }
+    .study14 {
+    background-image: url("images/wall/a (5).jpg");
+    background-position:center;
+    }
+    .study15 {
+    background-image: url("images/wall/a (6).jpg");
+    background-position:center;
+    }
+    .study16 {
+    background-image: url("images/wall/a (7).jpg");
+    background-position:center;
+    }
+    .study17 {
+    background-image: url("images/wall/a (8).jpg");
+    background-position:center;
+    }
+    .study18 {
+    background-image: url("images/wall/a (9).jpg");
+    background-position:center;
+    }
+    .study19 {
+    background-image: url("images/wall/a (10).jpg");
+    background-position:center;
+    }
+    .study20 {
+    background-image: url("images/wall/a (11).jpg");
+    background-position:center;
+    }
+    .study21 {
+    background-image: url("images/wall/a (12).jpg");
+    background-position:center;
+    }
+    .study22 {
+    background-image: url("images/wall/a (13).jpg");
+    background-position:center;
+    }
+    .study23 {
+    background-image: url("images/wall/a (14).jpg");
+    background-position:center;
+    }
+    .study24 {
+    background-image: url("images/wall/a (15).jpg");
+    background-position:center;
+    }
+    .study25 {
+    background-image: url("images/wall/a (16).jpg");
+    }
+    .study26 {
+    background-image: url("images/wall/a (17).jpg");
+    }
+    .study27 {
+    background-image: url("images/wall/a (18).jpg");
+    background-position:center;
+    }
+    .study28 {
+    background-image: url("images/wall/a (19).jpg");
+    }
+    .study29 {
+    background-image: url("images/wall/a (20).jpg");
+    }
+    .study30 {
+    background-image: url("images/wall/a (21).jpg");
+    background-position:center;
+    }
+  body
+    .case-study-gallery
+      h1.title Hover on image to view/download
+      p(style="text-align:center;") My best collection in wallpapers 
+      .case-study.study1
+        .case-study__overlay
+          h2.case-study__title Neon lines
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1PHTPMVu-qQiD2ImGj1DMuStYUW1yXSRr" download) Click to Download
+      .case-study.study2
+        .case-study__overlay
+          h2.case-study__title Galaxy
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1WgZPCeRUc-NzfZ8Y0l2FSoQ4pqCW-L1T" download) Click to Download
+      .case-study.study3
+        .case-study__overlay
+          h2.case-study__title 3D bars
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1vwXhGN0A-hjg76SLbW6SpRtm0jjjHH_z" download) Click to Download
+      .case-study.study4
+        .case-study__overlay
+          h2.case-study__title Captain America
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1BaZ2aSsRjuTKLk5iBNaX3nWCiegXEf8P" download) Click to Download
+      .case-study.study5
+        .case-study__overlay
+          h2.case-study__title Krishna's Feather
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1tN9AAVBw5z_LkgJDO3YF5p9VX7n8aKx9" download) Click to Download
+      .case-study.study6
+        .case-study__overlay
+          h2.case-study__title Hill man
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1dYlMA2ych6wJ03JjwTBe44CkkAmG3h64" download) Click to Download
+      .case-study.study7
+        .case-study__overlay
+          h2.case-study__title Neon mask
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1dfJixXItoAOp0nvWA_7svcuHCzCBF1lY" download) Click to Download
+      .case-study.study8
+        .case-study__overlay
+          h2.case-study__title Lord krishna
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1gyBgXdGgUMPlTekgoFInKD6l4tpPkU10" download) Click to Download
+      .case-study.study9
+        .case-study__overlay
+          h2.case-study__title The golden gate bridge
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1x05Z5tszF9QeXmppwfjbiiL0egNI0nWe" download) Click to Download
+      .case-study.study10
+        .case-study__overlay
+          h2.case-study__title Black geomentry
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1QUib9sCTstQtFRbAXFOmYgUBpSwxquOO" download) Click to Download
+      .case-study.study11
+        .case-study__overlay
+          h2.case-study__title Sri krishna
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1Ym5eeAahBj1ixw4rQELqkkSRUW3M9-kI" download) Click to Download
+      .case-study.study12
+        .case-study__overlay
+          h2.case-study__title krishna - iskan
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1Q8qY71ZjRDyY3mlfnMorUcL6-ZP0ujCa" download) Click to Download
+      .case-study.study13
+        .case-study__overlay
+          h2.case-study__title Rose flowers
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1rdCTligupgJCjFdjJlWDsdntHI7Jk8iU" download) Click to Download
+      .case-study.study14
+        .case-study__overlay
+          h2.case-study__title Shri krishna - Iskan
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1N3YwY9-3-Xk5KV4pACPrXu8_s-V0AskK" download) Click to Download
+      .case-study.study15
+        .case-study__overlay
+          h2.case-study__title Gopi krishna
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1160jbpCmsoXHocDx0-gfDd8QZIEvhgkl" download) Click to Download
+      .case-study.study16
+        .case-study__overlay
+          h2.case-study__title Lord sri krishna
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1L-SGA-XHqhTKImlMcxjNBSye7o4jDYrN" download) Click to Download
+      .case-study.study17
+        .case-study__overlay
+          h2.case-study__title Lord krishna face
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1nlRNtkeOTB8qMoMu_M0J39HQWRKV-Ku1" download) Click to Download
+      .case-study.study18
+        .case-study__overlay
+          h2.case-study__title Minimalist Bat-man
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1LfLEvlL40osSoJaPFK945-BJdf65WXBv" download) Click to Download
+      .case-study.study19
+        .case-study__overlay
+          h2.case-study__title Coloured Diagonal lines
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1QhBjqoB9Y8m4Yhsov87JuDyELF3_c3ki" download) Click to Download
+      .case-study.study20
+        .case-study__overlay
+          h2.case-study__title Purple flowers
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1CcSSRPiy1vGYCKdvegxYd6qRK4Zszgwu" download) Click to Download
+      .case-study.study21
+        .case-study__overlay
+          h2.case-study__title Krishna's ideal
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=14_tUtFqUhhQbrddMqmZusgtBKTStNnln" download) Click to Download
+      .case-study.study22
+        .case-study__overlay
+          h2.case-study__title Gopi krishna
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1MaC05_6xuiLOh1hPThD_oEQzOSWv8sjC" download) Click to Download
+      .case-study.study23
+        .case-study__overlay
+          h2.case-study__title Matty effect
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1EwYX2uhXwXcJB2od04LJcW27fFglEx8y" download) Click to Download
+      .case-study.study24
+        .case-study__overlay
+          h2.case-study__title Minimalist jocker
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1w9QTLR489oVuSFjGy3DRTd7hIrpfcrhY" download) Click to Download
+      .case-study.study25
+        .case-study__overlay
+          h2.case-study__title Radha krishna
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1w-VnpDJWyY_4F87vxn_rShp9gzyrPf3B" download) Click to Download
+      .case-study.study26
+        .case-study__overlay
+          h2.case-study__title Dreaming man
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1yYYZN4SRCVqFpbEVFKZrsaZfA5xCscOk" download) Click to Download
+      .case-study.study27
+        .case-study__overlay
+          h2.case-study__title Minimalist Star-lord
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1ll77cu1_yDnuBIajo39Tdbi8cLLl1HvA" download) Click to Download
+      .case-study.study28
+        .case-study__overlay
+          h2.case-study__title A scenary
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1GhA9a1VDk_gC9UgdApL7mQU_IUk6afpw" download) Click to Download
+      .case-study.study29
+        .case-study__overlay
+          h2.case-study__title Krishna
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1H4IrfMHoOgcTkMFlJQQD8G69qEuNaQJA" download) Click to Download
+      .case-study.study30
+        .case-study__overlay
+          h2.case-study__title Minimalist fox
+          a.case-study__link(href="https://drive.google.com/uc?export=download&id=1AFqzWoSx-D7_37Efcfr6rVXK8FGMlebk" download) Click to Download
+    
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+    script.
+      window.onload = function() {
+      document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+      }, false);
+      document.addEventListener("keydown", function(e) {
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+      alert('not allowed');
+      disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+      alert('not allowed');
+      disabledEvent(e);
+      }
+      }, false);
+      function disabledEvent(e){
+      if (e.stopPropagation){
+      e.stopPropagation();
+      } else if (window.event){
+      window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+      }
+      };
+    
+    script.
+      document.onkeydown = function(e) {
+          if (e.ctrlKey && 
+              (e.keyCode === 67 || 
+               e.keyCode === 86 || 
+               e.keyCode === 73 || 
+               e.keyCode === 85 || 
+               e.keyCode === 117)) {
+              alert('not allowed');
+              return false;
+          } else {
+              return true;
+          }
+      };
